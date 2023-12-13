@@ -1,0 +1,50 @@
+[0.321s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_navigation2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pederba/sesasr_project_ws/install/turtlebot3_navigation2
+[4.241s] -- The C compiler identification is GNU 11.4.0
+[4.241s] -- The CXX compiler identification is GNU 11.4.0
+[4.241s] -- Detecting C compiler ABI info
+[4.242s] -- Detecting C compiler ABI info - done
+[4.242s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.242s] -- Detecting C compile features
+[4.242s] -- Detecting C compile features - done
+[4.242s] -- Detecting CXX compiler ABI info
+[4.243s] -- Detecting CXX compiler ABI info - done
+[4.243s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.243s] -- Detecting CXX compile features
+[4.243s] -- Detecting CXX compile features - done
+[4.243s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.244s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[4.244s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.291s] -- Configuring done
+[4.299s] -- Generating done
+[4.301s] -- Build files have been written to: /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2
+[4.321s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_navigation2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pederba/sesasr_project_ws/install/turtlebot3_navigation2
+[4.322s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2 -- -j8 -l8
+[4.422s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2 -- -j8 -l8
+[4.599s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2
+[6.041s] -- Install configuration: ""
+[6.042s] -- Execute custom install script
+[6.042s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2.launch.py
+[6.042s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2_use_sim_time.launch.py
+[6.042s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/turtlebot3_world.pgm
+[6.042s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/turtlebot3_world.yaml
+[6.043s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/burger.yaml
+[6.043s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/burger_use_sim_time.yaml
+[6.043s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle_pi.yaml
+[6.043s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle_pi_use_sim_time.yaml
+[6.043s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/rviz/navigation2.rviz
+[6.043s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/package_run_dependencies/turtlebot3_navigation2
+[6.044s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/parent_prefix_path/turtlebot3_navigation2
+[6.044s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.sh
+[6.044s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.dsv
+[6.044s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.sh
+[6.044s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.dsv
+[6.044s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.bash
+[6.045s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.sh
+[6.045s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.zsh
+[6.045s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.dsv
+[6.045s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.dsv
+[6.045s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/packages/turtlebot3_navigation2
+[6.046s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config.cmake
+[6.046s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config-version.cmake
+[6.046s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.xml
+[6.402s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2

@@ -1,0 +1,28 @@
+[3.996s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_teleop': PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_teleop/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pederba/sesasr_project_ws/build/turtlebot3_teleop/build --no-deps install_data
+[5.723s] running develop
+[5.735s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/easy_install.py:144: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[5.735s]   warnings.warn(
+[5.858s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[5.858s]   warnings.warn(
+[6.561s] running egg_info
+[6.562s] creating turtlebot3_teleop.egg-info
+[6.599s] writing turtlebot3_teleop.egg-info/PKG-INFO
+[6.600s] writing dependency_links to turtlebot3_teleop.egg-info/dependency_links.txt
+[6.600s] writing entry points to turtlebot3_teleop.egg-info/entry_points.txt
+[6.601s] writing requirements to turtlebot3_teleop.egg-info/requires.txt
+[6.602s] writing top-level names to turtlebot3_teleop.egg-info/top_level.txt
+[6.602s] writing manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[6.689s] reading manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[6.690s] writing manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[6.747s] running build_ext
+[6.748s] Creating /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3-teleop.egg-link (link to .)
+[6.749s] Installing teleop_keyboard script to /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[6.749s] 
+[6.750s] Installed /home/pederba/sesasr_project_ws/build/turtlebot3_teleop
+[6.750s] running install_data
+[6.751s] creating /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/share/ament_index
+[6.751s] creating /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/share/ament_index/resource_index
+[6.752s] creating /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/share/ament_index/resource_index/packages
+[6.752s] copying resource/turtlebot3_teleop -> /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/share/ament_index/resource_index/packages
+[6.752s] copying package.xml -> /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/share/turtlebot3_teleop
+[7.192s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_teleop' returned '0': PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_teleop/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pederba/sesasr_project_ws/build/turtlebot3_teleop/build --no-deps install_data

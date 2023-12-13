@@ -1,0 +1,44 @@
+[0.541s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_cartographer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pederba/sesasr_project_ws/install/turtlebot3_cartographer
+[0.738s] -- The C compiler identification is GNU 11.4.0
+[0.940s] -- The CXX compiler identification is GNU 11.4.0
+[0.962s] -- Detecting C compiler ABI info
+[1.169s] -- Detecting C compiler ABI info - done
+[1.192s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.192s] -- Detecting C compile features
+[1.193s] -- Detecting C compile features - done
+[1.200s] -- Detecting CXX compiler ABI info
+[1.445s] -- Detecting CXX compiler ABI info - done
+[1.458s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.463s] -- Detecting CXX compile features
+[1.463s] -- Detecting CXX compile features - done
+[1.475s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.939s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[4.139s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.478s] -- Configuring done
+[4.488s] -- Generating done
+[4.491s] -- Build files have been written to: /home/pederba/sesasr_project_ws/build/turtlebot3_cartographer
+[4.506s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_cartographer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pederba/sesasr_project_ws/install/turtlebot3_cartographer
+[4.507s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_cartographer -- -j8 -l8
+[4.616s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_cartographer -- -j8 -l8
+[4.762s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_cartographer
+[6.251s] -- Install configuration: ""
+[6.252s] -- Execute custom install script
+[6.252s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/config/turtlebot3_2d.lua
+[6.253s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch/cartographer.launch.py
+[6.253s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/rviz/cartographer.rviz
+[6.254s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/package_run_dependencies/turtlebot3_cartographer
+[6.254s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/parent_prefix_path/turtlebot3_cartographer
+[6.255s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.sh
+[6.264s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.dsv
+[6.264s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.sh
+[6.264s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.dsv
+[6.265s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.bash
+[6.265s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.sh
+[6.265s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.zsh
+[6.265s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.dsv
+[6.266s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.dsv
+[6.266s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/packages/turtlebot3_cartographer
+[6.266s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig.cmake
+[6.266s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig-version.cmake
+[6.266s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.xml
+[6.470s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_cartographer

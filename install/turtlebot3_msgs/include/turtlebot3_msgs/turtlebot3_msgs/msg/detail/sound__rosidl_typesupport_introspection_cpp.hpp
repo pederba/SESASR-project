@@ -1,0 +1,1 @@
+/home/pederba/sesasr_project_ws/build/turtlebot3_msgs/rosidl_typesupport_introspection_cpp/turtlebot3_msgs/msg/detail/sound__rosidl_typesupport_introspection_cpp.hpp
