@@ -1,0 +1,43 @@
+[4.080s] Invoking command in '/home/pederba/sesasr_project_ws/src/project_pkg': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed
+[5.182s] running egg_info
+[5.185s] creating ../../build/project_pkg/project_pkg.egg-info
+[5.231s] writing ../../build/project_pkg/project_pkg.egg-info/PKG-INFO
+[5.233s] writing dependency_links to ../../build/project_pkg/project_pkg.egg-info/dependency_links.txt
+[5.240s] writing requirements to ../../build/project_pkg/project_pkg.egg-info/requires.txt
+[5.240s] writing top-level names to ../../build/project_pkg/project_pkg.egg-info/top_level.txt
+[5.240s] writing manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[5.350s] reading manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[5.353s] writing manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[5.353s] running build
+[5.354s] running build_py
+[5.355s] creating /home/pederba/sesasr_project_ws/build/project_pkg/build
+[5.355s] creating /home/pederba/sesasr_project_ws/build/project_pkg/build/lib
+[5.356s] creating /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[5.356s] copying project_pkg/measurement_model.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[5.356s] copying project_pkg/ekf.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[5.365s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[5.365s]   warnings.warn(
+[5.365s] copying project_pkg/__init__.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[5.365s] copying project_pkg/motion_models.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[5.366s] running install
+[5.369s] running install_lib
+[5.420s] creating /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[5.421s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/measurement_model.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[5.421s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/ekf.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[5.422s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/__init__.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[5.426s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/motion_models.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[5.427s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/measurement_model.py to measurement_model.cpython-310.pyc
+[5.427s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/ekf.py to ekf.cpython-310.pyc
+[5.427s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/__init__.py to __init__.cpython-310.pyc
+[5.428s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/motion_models.py to motion_models.cpython-310.pyc
+[5.429s] running install_data
+[5.479s] creating /home/pederba/sesasr_project_ws/install/project_pkg/share/ament_index
+[5.480s] creating /home/pederba/sesasr_project_ws/install/project_pkg/share/ament_index/resource_index
+[5.480s] creating /home/pederba/sesasr_project_ws/install/project_pkg/share/ament_index/resource_index/packages
+[5.481s] copying resource/project_pkg -> /home/pederba/sesasr_project_ws/install/project_pkg/share/ament_index/resource_index/packages
+[5.482s] copying package.xml -> /home/pederba/sesasr_project_ws/install/project_pkg/share/project_pkg
+[5.483s] running install_egg_info
+[5.542s] Copying ../../build/project_pkg/project_pkg.egg-info to /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info
+[5.544s] running install_scripts
+[5.715s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/project_pkg/install.log'
+[5.854s] Invoked command in '/home/pederba/sesasr_project_ws/src/project_pkg' returned '0': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed

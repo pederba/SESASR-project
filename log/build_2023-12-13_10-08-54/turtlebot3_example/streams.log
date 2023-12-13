@@ -1,0 +1,57 @@
+[2.277s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_example': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs LD_LIBRARY_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_example/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/pederba/sesasr_project_ws/build/turtlebot3_example/build
+[2.838s] running develop
+[2.839s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/easy_install.py:144: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.839s]   warnings.warn(
+[2.897s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.897s]   warnings.warn(
+[3.241s] Removing /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3-example.egg-link (link to .)
+[3.545s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_example' returned '0': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs LD_LIBRARY_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_example/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/pederba/sesasr_project_ws/build/turtlebot3_example/build
+[3.548s] Invoking command in '/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_example': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs LD_LIBRARY_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_example/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/pederba/sesasr_project_ws/build/turtlebot3_example/build install --record /home/pederba/sesasr_project_ws/build/turtlebot3_example/install.log --single-version-externally-managed
+[4.137s] running egg_info
+[4.161s] writing ../../../build/turtlebot3_example/turtlebot3_example.egg-info/PKG-INFO
+[4.162s] writing dependency_links to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/dependency_links.txt
+[4.163s] writing entry points to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/entry_points.txt
+[4.163s] writing requirements to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/requires.txt
+[4.164s] writing top-level names to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/top_level.txt
+[4.219s] reading manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[4.220s] writing manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[4.221s] running build
+[4.223s] running build_py
+[4.224s] creating /home/pederba/sesasr_project_ws/build/turtlebot3_example/build
+[4.224s] creating /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib
+[4.224s] creating /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example
+[4.224s] copying turtlebot3_example/__init__.py -> /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example
+[4.224s] creating /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[4.225s] copying turtlebot3_example/turtlebot3_obstacle_detection/turtlebot3_obstacle_detection.py -> /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[4.225s] copying turtlebot3_example/turtlebot3_obstacle_detection/__init__.py -> /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[4.225s] creating /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[4.226s] copying turtlebot3_example/turtlebot3_position_control/turtlebot3_position_control_pointop_key.py -> /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[4.226s] copying turtlebot3_example/turtlebot3_position_control/__init__.py -> /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[4.226s] running install
+[4.226s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.227s]   warnings.warn(
+[4.231s] running install_lib
+[4.259s] creating /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example
+[4.259s] creating /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection
+[4.260s] copying /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection/turtlebot3_obstacle_detection.py -> /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection
+[4.260s] copying /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection/__init__.py -> /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection
+[4.260s] creating /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[4.263s] copying /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control/turtlebot3_position_control_pointop_key.py -> /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[4.263s] copying /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control/__init__.py -> /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[4.263s] copying /home/pederba/sesasr_project_ws/build/turtlebot3_example/build/lib/turtlebot3_example/__init__.py -> /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example
+[4.264s] byte-compiling /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection/turtlebot3_obstacle_detection.py to turtlebot3_obstacle_detection.cpython-310.pyc
+[4.264s] byte-compiling /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection/__init__.py to __init__.cpython-310.pyc
+[4.264s] byte-compiling /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control/turtlebot3_position_control_pointop_key.py to turtlebot3_position_control_pointop_key.cpython-310.pyc
+[4.265s] byte-compiling /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control/__init__.py to __init__.cpython-310.pyc
+[4.265s] byte-compiling /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/__init__.py to __init__.cpython-310.pyc
+[4.266s] running install_data
+[4.295s] running install_egg_info
+[4.330s] Copying ../../../build/turtlebot3_example/turtlebot3_example.egg-info to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example-2.1.5-py3.10.egg-info
+[4.333s] running install_scripts
+[4.453s] Installing turtlebot3_interactive_marker script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.454s] Installing turtlebot3_obstacle_detection script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.454s] Installing turtlebot3_patrol_client script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.454s] Installing turtlebot3_patrol_server script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.454s] Installing turtlebot3_position_control_pointop_key script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.455s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/turtlebot3_example/install.log'
+[4.559s] Invoked command in '/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_example' returned '0': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs LD_LIBRARY_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_example/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/pederba/sesasr_project_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/pederba/sesasr_project_ws/build/turtlebot3_example/build install --record /home/pederba/sesasr_project_ws/build/turtlebot3_example/install.log --single-version-externally-managed
