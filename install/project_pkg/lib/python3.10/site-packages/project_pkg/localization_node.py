@@ -6,7 +6,7 @@ from rclpy.node import Node
 from nav_msgs.msg import Odometry
 
 from project_pkg.ekf import RobotEKF
-from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, eval_hx, eval_Ht
+from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, eval_hx, eval_Ht, get_odometry_input
 from project_pkg.measurement_model import z_landmark, residual
 
 
@@ -58,7 +58,7 @@ class LocalizationNode(Node):
         self.max_range = 8  # [m]
         self.fov_deg =  np.deg2rad(45) # [rad]
 
-        self.ekf = ekf = RobotEKF(
+        self.ekf = RobotEKF(
             dim_x=3,
             dim_z=2,
             dim_u=3,
@@ -66,39 +66,36 @@ class LocalizationNode(Node):
             eval_Gt=eval_Gt_odom,
             eval_Vt=eval_Vt_odom,
             eval_hx=eval_hx,
-            eval_Ht=eval_Ht,
+            eval_Ht=eval_Ht
         )
         self.ekf.mu = self.initial_pose
         self.ekf.Sigma = self.initial_covariance
-        self.ekf.Mt = np.diag([self.std_lin_vel**2, self.std_ang_vel**2])
+        # self.ekf.Mt = np.diag([self.std_lin_vel**2, self.std_ang_vel**2])
         self.ekf.Qt = np.diag([self.std_rng**2, self.std_brg**2])
 
-        self.u = np.array([[0, 0]]).T # latest input
+        self.prev_pose = self.initial_pose
 
     def ground_truth_callback(self, msg):
         x_pose_true = msg.pose.pose.position.x
         y_pose_true = msg.pose.pose.position.y
         _, _, yaw_true = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         true_pose = np.array([[x_pose_true, y_pose_true, yaw_true]]).T
-        
 
     def odom_callback(self, msg):
         x_pose = msg.pose.pose.position.x
         y_pose = msg.pose.pose.position.y
         _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.ekf.mu = np.array([[x_pose, y_pose, yaw]]).T
-
-        x_vel = msg.twist.twist.linear.x
-        yaw_vel = msg.twist.twist.angular.z
-        self.u = np.array([[x_vel, yaw_vel]]).T
         
-
     def ekf_step(self):
-        self.ekf.predict(u=self.u, g_extra_args=(self.ekf_period_s, ))
+        u = get_odometry_input(self.ekf.mu[:,0], self.prev_pose[:,0])
+        self.ekf.predict(u=u)
+        self.prev_pose = self.ekf.mu
+
         for lmark in self.landmarks:
             z = z_landmark(self.ekf.mu, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
             if z is not None:
-                self.ekf.update(z, lmark, residual=residual)
+                self.ekf.update(z[:,0], lmark, residual=residual)
 
         msg = Odometry()
         msg.pose.pose.position.x = self.ekf.mu[0,0]

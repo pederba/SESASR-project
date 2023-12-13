@@ -2,6 +2,7 @@ import sympy
 import numpy as np
 from sympy import symbols, Matrix
 
+# Velocity model
 
 x, y, theta, v, w, dt = symbols('x y theta v w dt')
 gux = Matrix([[x + v/w*sympy.sin(theta + w*dt) - v/w*sympy.sin(theta)], 
