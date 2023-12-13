@@ -1,0 +1,23 @@
+[3.436s] Invoking command in '/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_teleop': PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_teleop/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/turtlebot3_teleop build --build-base /home/pederba/sesasr_project_ws/build/turtlebot3_teleop/build install --record /home/pederba/sesasr_project_ws/build/turtlebot3_teleop/install.log --single-version-externally-managed
+[4.382s] running egg_info
+[4.416s] writing ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/PKG-INFO
+[4.417s] writing dependency_links to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/dependency_links.txt
+[4.417s] writing entry points to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/entry_points.txt
+[4.417s] writing requirements to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/requires.txt
+[4.417s] writing top-level names to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/top_level.txt
+[4.490s] reading manifest file '../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[4.492s] writing manifest file '../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[4.493s] running build
+[4.493s] running build_py
+[4.494s] running install
+[4.494s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.494s]   warnings.warn(
+[4.506s] running install_lib
+[4.546s] running install_data
+[4.586s] running install_egg_info
+[4.632s] removing '/home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3_teleop-2.1.5-py3.10.egg-info' (and everything under it)
+[4.633s] Copying ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info to /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3_teleop-2.1.5-py3.10.egg-info
+[4.635s] running install_scripts
+[4.792s] Installing teleop_keyboard script to /home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[4.793s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/turtlebot3_teleop/install.log'
+[5.327s] Invoked command in '/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_teleop' returned '0': PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_teleop/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/turtlebot3_teleop build --build-base /home/pederba/sesasr_project_ws/build/turtlebot3_teleop/build install --record /home/pederba/sesasr_project_ws/build/turtlebot3_teleop/install.log --single-version-externally-managed

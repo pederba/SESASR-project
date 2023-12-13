@@ -1,0 +1,2 @@
+[console_scripts]
+localization_node = project_pkg.localization_node:main

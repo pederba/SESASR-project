@@ -1,0 +1,32 @@
+[2.013s] Invoking command in '/home/pederba/sesasr_project_ws/src/project_pkg': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed
+[2.666s] running egg_info
+[2.695s] writing ../../build/project_pkg/project_pkg.egg-info/PKG-INFO
+[2.696s] writing dependency_links to ../../build/project_pkg/project_pkg.egg-info/dependency_links.txt
+[2.696s] writing entry points to ../../build/project_pkg/project_pkg.egg-info/entry_points.txt
+[2.696s] writing requirements to ../../build/project_pkg/project_pkg.egg-info/requires.txt
+[2.696s] writing top-level names to ../../build/project_pkg/project_pkg.egg-info/top_level.txt
+[2.759s] reading manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[2.760s] writing manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[2.760s] running build
+[2.760s] running build_py
+[2.761s] copying project_pkg/ekf.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[2.761s] copying project_pkg/localization_node.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[2.761s] copying project_pkg/motion_models.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[2.761s] running install
+[2.762s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.762s]   warnings.warn(
+[2.768s] running install_lib
+[2.796s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/ekf.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[2.796s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/localization_node.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[2.796s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/motion_models.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[2.797s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/ekf.py to ekf.cpython-310.pyc
+[2.798s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/localization_node.py to localization_node.cpython-310.pyc
+[2.799s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/motion_models.py to motion_models.cpython-310.pyc
+[2.800s] running install_data
+[2.831s] running install_egg_info
+[2.861s] removing '/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[2.862s] Copying ../../build/project_pkg/project_pkg.egg-info to /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info
+[2.863s] running install_scripts
+[2.971s] Installing localization_node script to /home/pederba/sesasr_project_ws/install/project_pkg/lib/project_pkg
+[2.971s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/project_pkg/install.log'
+[3.066s] Invoked command in '/home/pederba/sesasr_project_ws/src/project_pkg' returned '0': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed

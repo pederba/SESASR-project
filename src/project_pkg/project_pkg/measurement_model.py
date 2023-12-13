@@ -1,11 +1,9 @@
 import numpy as np
-import math
-import sympy
 from project_pkg.motion_models import eval_hx
 from numpy.random import randn # function to get a random number from a Gaussian distribution
 
 
-def z_landmark(x, lmark, std_rng=0.5, std_brg=0.5):
+def z_landmark(x, lmark, std_rng=0.5, std_brg=0.5, max_range=8.0, fov=np.deg2rad(45)):
     """
     Simulate the measurement of a landmark adding some Gaussian noise
 
@@ -20,8 +18,7 @@ def z_landmark(x, lmark, std_rng=0.5, std_brg=0.5):
     z = eval_hx(*x, *lmark)
 
     # filter z for a more realistic sensor simulation (add a max range distance and a FOV)
-    fov = np.deg2rad(45)
-    if z[0, 0] < 8.0 and abs(z[1, 0])<fov:
+    if z[0, 0] < max_range and abs(z[1, 0])<fov:
         return z + np.array([[randn() * std_rng**2, randn() * std_brg]]).T
         
     return None

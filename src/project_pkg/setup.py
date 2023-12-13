@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'localization_node = project_pkg.localization_node:main',
         ],
     },
 )

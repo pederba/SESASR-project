@@ -1,0 +1,138 @@
+[0.757s] Invoking command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces -- -j8 -l8
+[0.885s] [  2%] Built target dynamixel_sdk_custom_interfaces__cpp
+[0.890s] [ 12%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c
+[0.977s] [ 23%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.986s] [ 33%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp
+[1.029s] [ 33%] Built target ament_cmake_python_symlink_dynamixel_sdk_custom_interfaces
+[1.065s] [ 43%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp
+[1.082s] [ 53%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c
+[1.093s] [ 64%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c
+[1.097s] [ 74%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c
+[1.141s] [ 74%] Built target dynamixel_sdk_custom_interfaces
+[1.185s] [ 76%] Built target dynamixel_sdk_custom_interfaces__py
+[1.235s] [ 84%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_py
+[1.295s] [ 89%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.309s] [ 94%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext
+[1.314s] [100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.837s] running egg_info
+[1.873s] writing dynamixel_sdk_custom_interfaces.egg-info/PKG-INFO
+[1.874s] writing dependency_links to dynamixel_sdk_custom_interfaces.egg-info/dependency_links.txt
+[1.874s] writing top-level names to dynamixel_sdk_custom_interfaces.egg-info/top_level.txt
+[2.049s] reading manifest file 'dynamixel_sdk_custom_interfaces.egg-info/SOURCES.txt'
+[2.050s] writing manifest file 'dynamixel_sdk_custom_interfaces.egg-info/SOURCES.txt'
+[2.186s] [100%] Built target ament_cmake_python_build_dynamixel_sdk_custom_interfaces_egg
+[2.655s] Invoked command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces -- -j8 -l8
+[3.885s] Invoking command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces
+[4.903s] -- Install configuration: ""
+[4.904s] -- Execute custom install script
+[4.906s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces
+[4.906s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h
+[4.906s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h
+[4.907s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h
+[4.907s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.907s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_position.h
+[4.907s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h
+[4.908s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h
+[4.908s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h
+[4.908s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.h
+[4.909s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh
+[4.909s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv
+[4.909s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h
+[4.909s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.910s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h
+[4.911s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp
+[4.912s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp
+[4.912s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp
+[4.914s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_position.hpp
+[4.915s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp
+[4.977s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp
+[4.977s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp
+[4.977s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.hpp
+[4.978s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp
+[4.978s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.979s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp
+[4.979s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
+[4.980s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.980s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h
+[4.980s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp
+[4.981s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp
+[4.981s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh
+[4.982s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv
+[4.982s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/PKG-INFO
+[4.983s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/SOURCES.txt
+[4.983s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/dependency_links.txt
+[4.984s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/top_level.txt
+[4.984s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/__init__.py
+[4.985s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_c.c
+[4.985s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.985s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.986s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.986s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.987s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.988s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so
+[4.988s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py
+[4.988s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py
+[4.989s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c
+[4.990s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py
+[4.990s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py
+[4.991s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c
+[4.992s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.992s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.992s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.992s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl
+[4.993s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl
+[4.993s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg
+[4.993s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv
+[4.993s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg
+[4.994s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg
+[4.994s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces
+[4.994s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces
+[4.994s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh
+[4.994s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv
+[4.995s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh
+[4.995s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv
+[4.995s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash
+[4.995s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh
+[4.995s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh
+[4.995s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv
+[4.996s] -- Symlinking: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv
+[4.996s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces
+[4.996s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.996s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.996s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.996s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.997s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.997s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.997s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.997s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake
+[4.997s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake
+[4.997s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml
+[4.998s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
+[4.998s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.998s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.998s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
+[4.998s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
+[4.998s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.999s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
+[4.999s] Listing '/home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces'...
+[4.999s] Listing '/home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/msg'...
+[4.999s] Listing '/home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages/dynamixel_sdk_custom_interfaces/srv'...
+[4.999s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so
+[4.999s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake
+[5.000s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.000s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.000s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.000s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake
+[5.000s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.001s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.001s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.001s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.001s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake
+[5.001s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.001s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.001s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.002s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake
+[5.002s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.002s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_pyExport.cmake
+[5.002s] -- Up-to-date: /home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.413s] Invoked command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces
