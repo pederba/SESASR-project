@@ -1,0 +1,29 @@
+[2.095s] Invoking command in '/home/pederba/sesasr_project_ws/src/project_pkg': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed
+[2.747s] running egg_info
+[2.779s] writing ../../build/project_pkg/project_pkg.egg-info/PKG-INFO
+[2.780s] writing dependency_links to ../../build/project_pkg/project_pkg.egg-info/dependency_links.txt
+[2.780s] writing entry points to ../../build/project_pkg/project_pkg.egg-info/entry_points.txt
+[2.780s] writing requirements to ../../build/project_pkg/project_pkg.egg-info/requires.txt
+[2.781s] writing top-level names to ../../build/project_pkg/project_pkg.egg-info/top_level.txt
+[2.838s] reading manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[2.840s] writing manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[2.840s] running build
+[2.840s] running build_py
+[2.841s] copying project_pkg/localization_node.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[2.841s] copying project_pkg/motion_models.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[2.841s] running install
+[2.842s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.842s]   warnings.warn(
+[2.848s] running install_lib
+[2.876s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/localization_node.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[2.876s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/motion_models.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[2.877s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/localization_node.py to localization_node.cpython-310.pyc
+[2.878s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/motion_models.py to motion_models.cpython-310.pyc
+[2.879s] running install_data
+[2.906s] running install_egg_info
+[2.939s] removing '/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[2.940s] Copying ../../build/project_pkg/project_pkg.egg-info to /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info
+[2.941s] running install_scripts
+[3.051s] Installing localization_node script to /home/pederba/sesasr_project_ws/install/project_pkg/lib/project_pkg
+[3.051s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/project_pkg/install.log'
+[3.119s] Invoked command in '/home/pederba/sesasr_project_ws/src/project_pkg' returned '0': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed

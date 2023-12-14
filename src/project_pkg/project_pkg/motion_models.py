@@ -17,7 +17,8 @@ Vt = gux.jacobian(Matrix([v, w]))
 eval_Vt = sympy.lambdify((x, y, theta, v, w, dt), Vt, 'numpy')
 
 mx, my = symbols('mx my')
-hx = Matrix([[sympy.sqrt((mx - x)**2 + (my - y)**2)], [sympy.atan2(my - y, mx - x) - theta]])
+hx = Matrix([[sympy.sqrt((mx - x)**2 + (my - y)**2)], 
+             [sympy.atan2(my - y, mx - x) - theta]])
 eval_hx = sympy.lambdify((x, y, theta, mx, my), hx, 'numpy')
 
 Ht = hx.jacobian(Matrix([x, y, theta]))
