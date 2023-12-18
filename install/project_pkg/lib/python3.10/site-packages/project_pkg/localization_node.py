@@ -84,17 +84,17 @@ class LocalizationNode(Node):
         _, _, yaw_true = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.true_pose = np.array([[x_pose_true, y_pose_true, yaw_true]]).T
 
-    def odom_callback(self, msg):
-        x_pose = msg.pose.pose.position.x
-        y_pose = msg.pose.pose.position.y
-        _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
-        self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
-        
         # Simulate measuring landmarks
         for lmark in self.landmarks:
             z = z_landmark(self.true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
             if z is not None:
                 self.ekf.update(z[:,0], lmark, residual=residual)
+
+    def odom_callback(self, msg):
+        x_pose = msg.pose.pose.position.x + self.initial_pose[0,0]
+        y_pose = msg.pose.pose.position.y + self.initial_pose[1,0]
+        _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
+        self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
         
     def ekf_step(self):
         u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0])
