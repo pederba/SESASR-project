@@ -1,7 +1,16 @@
 import numpy as np
-from project_pkg.motion_models import eval_hx
+import sympy
+from sympy import symbols, Matrix
 from numpy.random import randn # function to get a random number from a Gaussian distribution
 
+# Landmark measurement model
+x, y, theta, mx, my = symbols('x y theta mx my')
+hx = Matrix([[sympy.sqrt((mx - x)**2 + (my - y)**2)], 
+             [sympy.atan2(my - y, mx - x) - theta]])
+eval_hx = sympy.lambdify((x, y, theta, mx, my), hx, 'numpy')
+
+Ht = hx.jacobian(Matrix([x, y, theta]))
+eval_Ht = sympy.lambdify((x, y, theta, mx, my), Ht, 'numpy')
 
 def z_landmark(x, lmark, std_rng=0.5, std_brg=0.5, max_range=8.0, fov=np.deg2rad(45)):
     """

@@ -3,7 +3,6 @@ import numpy as np
 from sympy import symbols, Matrix
 
 # Velocity model
-
 x, y, theta, v, w, dt = symbols('x y theta v w dt')
 gux = Matrix([[x + v/w*sympy.sin(theta + w*dt) - v/w*sympy.sin(theta)], 
               [y + v/w*sympy.cos(theta) - v/w*sympy.cos(theta + w*dt)], 
@@ -16,16 +15,7 @@ eval_Gt = sympy.lambdify((x, y, theta, v, w, dt), Gt, 'numpy')
 Vt = gux.jacobian(Matrix([v, w]))
 eval_Vt = sympy.lambdify((x, y, theta, v, w, dt), Vt, 'numpy')
 
-mx, my = symbols('mx my')
-hx = Matrix([[sympy.sqrt((mx - x)**2 + (my - y)**2)], 
-             [sympy.atan2(my - y, mx - x) - theta]])
-eval_hx = sympy.lambdify((x, y, theta, mx, my), hx, 'numpy')
-
-Ht = hx.jacobian(Matrix([x, y, theta]))
-eval_Ht = sympy.lambdify((x, y, theta, mx, my), Ht, 'numpy')
-
 # Odometry motion model
-
 def get_odometry_input(x, x_prev):
     rot1 = np.arctan2(x[1] - x_prev[1], x[0] - x_prev[0]) - x_prev[2]
     trasl = np.sqrt((x[0] - x_prev[0])**2 + (x[1] - x_prev[1])**2)
