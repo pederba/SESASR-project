@@ -111,7 +111,7 @@ class LocalizationNode(Node):
         u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0])
         self.ekf.predict(u=u)
         self.prev_pose = self.odom_pose.copy()
-        self.publish_ekf()
+        #self.publish_ekf()
 
 
 
