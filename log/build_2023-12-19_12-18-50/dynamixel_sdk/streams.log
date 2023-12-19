@@ -1,0 +1,40 @@
+[0.761s] Invoking command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/dynamixel_sdk -- -j8 -l8
+[0.943s] [100%] Built target dynamixel_sdk
+[2.156s] Invoked command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/dynamixel_sdk -- -j8 -l8
+[2.578s] Invoking command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/dynamixel_sdk
+[3.016s] -- Install configuration: ""
+[3.016s] -- Execute custom install script
+[3.016s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h
+[3.016s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h
+[3.017s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h
+[3.017s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h
+[3.017s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h
+[3.017s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h
+[3.017s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h
+[3.017s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h
+[3.017s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h
+[3.018s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h
+[3.018s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h
+[3.018s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h
+[3.018s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h
+[3.018s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so
+[3.018s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh
+[3.018s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv
+[3.019s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk
+[3.019s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk
+[3.019s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh
+[3.019s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv
+[3.019s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh
+[3.019s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv
+[3.020s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash
+[3.020s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh
+[3.020s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh
+[3.020s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv
+[3.020s] -- Symlinking: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv
+[3.021s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk
+[3.030s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.030s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[3.035s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake
+[3.036s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake
+[3.036s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml
+[3.889s] Invoked command in '/home/pederba/sesasr_project_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/dynamixel_sdk

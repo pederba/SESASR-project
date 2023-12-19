@@ -1,0 +1,27 @@
+[3.362s] Invoking command in '/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_example': CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs:/home/pederba/sesasr_project_ws/install/turtlebot3:/home/pederba/sesasr_project_ws/install/turtlebot3_simulations:/home/pederba/sesasr_project_ws/install/turtlebot3_navigation2:/home/pederba/sesasr_project_ws/install/turtlebot3_fake_node:/home/pederba/sesasr_project_ws/install/turtlebot3_hardware:/home/pederba/sesasr_project_ws/install/turtlebot3_gazebo:/home/pederba/sesasr_project_ws/install/turtlebot3_bringup:/home/pederba/sesasr_project_ws/install/turtlebot3_description:/home/pederba/sesasr_project_ws/install/turtlebot3_cartographer:/home/pederba/sesasr_project_ws/install/dynamixel_sdk_examples:/home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces:/home/pederba/sesasr_project_ws/install/dynamixel_sdk PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_example/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/pederba/sesasr_project_ws/build/turtlebot3_example/build install --record /home/pederba/sesasr_project_ws/build/turtlebot3_example/install.log --single-version-externally-managed
+[4.174s] running egg_info
+[4.212s] writing ../../../build/turtlebot3_example/turtlebot3_example.egg-info/PKG-INFO
+[4.213s] writing dependency_links to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/dependency_links.txt
+[4.213s] writing entry points to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/entry_points.txt
+[4.213s] writing requirements to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/requires.txt
+[4.214s] writing top-level names to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/top_level.txt
+[4.278s] reading manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[4.280s] writing manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[4.280s] running build
+[4.281s] running build_py
+[4.282s] running install
+[4.282s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.283s]   warnings.warn(
+[4.290s] running install_lib
+[4.323s] running install_data
+[4.353s] running install_egg_info
+[4.386s] removing '/home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example-2.1.5-py3.10.egg-info' (and everything under it)
+[4.386s] Copying ../../../build/turtlebot3_example/turtlebot3_example.egg-info to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example-2.1.5-py3.10.egg-info
+[4.388s] running install_scripts
+[4.495s] Installing turtlebot3_interactive_marker script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.495s] Installing turtlebot3_obstacle_detection script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.496s] Installing turtlebot3_patrol_client script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.496s] Installing turtlebot3_patrol_server script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.496s] Installing turtlebot3_position_control_pointop_key script to /home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/turtlebot3_example
+[4.497s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/turtlebot3_example/install.log'
+[4.568s] Invoked command in '/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_example' returned '0': CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_msgs:/home/pederba/sesasr_project_ws/install/turtlebot3:/home/pederba/sesasr_project_ws/install/turtlebot3_simulations:/home/pederba/sesasr_project_ws/install/turtlebot3_navigation2:/home/pederba/sesasr_project_ws/install/turtlebot3_fake_node:/home/pederba/sesasr_project_ws/install/turtlebot3_hardware:/home/pederba/sesasr_project_ws/install/turtlebot3_gazebo:/home/pederba/sesasr_project_ws/install/turtlebot3_bringup:/home/pederba/sesasr_project_ws/install/turtlebot3_description:/home/pederba/sesasr_project_ws/install/turtlebot3_cartographer:/home/pederba/sesasr_project_ws/install/dynamixel_sdk_examples:/home/pederba/sesasr_project_ws/install/dynamixel_sdk_custom_interfaces:/home/pederba/sesasr_project_ws/install/dynamixel_sdk PYTHONPATH=/home/pederba/sesasr_project_ws/build/turtlebot3_example/prefix_override:/home/pederba/sesasr_project_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/pederba/sesasr_project_ws/build/turtlebot3_example/build install --record /home/pederba/sesasr_project_ws/build/turtlebot3_example/install.log --single-version-externally-managed

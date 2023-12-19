@@ -1,0 +1,30 @@
+[5.428s] Invoking command in '/home/pederba/sesasr_project_ws/src/project_pkg': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed
+[6.367s] running egg_info
+[6.405s] writing ../../build/project_pkg/project_pkg.egg-info/PKG-INFO
+[6.406s] writing dependency_links to ../../build/project_pkg/project_pkg.egg-info/dependency_links.txt
+[6.406s] writing entry points to ../../build/project_pkg/project_pkg.egg-info/entry_points.txt
+[6.407s] writing requirements to ../../build/project_pkg/project_pkg.egg-info/requires.txt
+[6.407s] writing top-level names to ../../build/project_pkg/project_pkg.egg-info/top_level.txt
+[6.507s] reading manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[6.509s] writing manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[6.509s] running build
+[6.509s] running build_py
+[6.509s] copying project_pkg/recorder.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[6.510s] copying project_pkg/plotter.py -> /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg
+[6.515s] running install
+[6.515s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[6.515s]   warnings.warn(
+[6.532s] running install_lib
+[6.571s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/recorder.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[6.571s] copying /home/pederba/sesasr_project_ws/build/project_pkg/build/lib/project_pkg/plotter.py -> /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg
+[6.573s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/recorder.py to recorder.cpython-310.pyc
+[6.575s] byte-compiling /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/plotter.py to plotter.cpython-310.pyc
+[6.577s] running install_data
+[6.612s] running install_egg_info
+[6.648s] removing '/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[6.649s] Copying ../../build/project_pkg/project_pkg.egg-info to /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info
+[6.649s] running install_scripts
+[6.785s] Installing localization_node script to /home/pederba/sesasr_project_ws/install/project_pkg/lib/project_pkg
+[6.785s] Installing recorder script to /home/pederba/sesasr_project_ws/install/project_pkg/lib/project_pkg
+[6.786s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/project_pkg/install.log'
+[6.894s] Invoked command in '/home/pederba/sesasr_project_ws/src/project_pkg' returned '0': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed

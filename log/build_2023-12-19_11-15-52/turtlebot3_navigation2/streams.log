@@ -1,0 +1,30 @@
+[0.434s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2 -- -j8 -l8
+[1.827s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2 -- -j8 -l8
+[2.002s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2
+[2.042s] -- Install configuration: ""
+[2.043s] -- Execute custom install script
+[2.054s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2.launch.py
+[2.055s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2_use_sim_time.launch.py
+[2.055s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/turtlebot3_world.pgm
+[2.055s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/turtlebot3_world.yaml
+[2.055s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/burger.yaml
+[2.056s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/burger_use_sim_time.yaml
+[2.056s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle_pi.yaml
+[2.061s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle_pi_use_sim_time.yaml
+[2.061s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/rviz/navigation2.rviz
+[2.061s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/package_run_dependencies/turtlebot3_navigation2
+[2.061s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/parent_prefix_path/turtlebot3_navigation2
+[2.062s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.sh
+[2.062s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.dsv
+[2.062s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.sh
+[2.062s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.dsv
+[2.062s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.bash
+[2.062s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.sh
+[2.063s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.zsh
+[2.063s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.dsv
+[2.063s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.dsv
+[2.110s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/packages/turtlebot3_navigation2
+[2.111s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config.cmake
+[2.111s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config-version.cmake
+[2.111s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.xml
+[2.551s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_navigation2

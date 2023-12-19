@@ -1,0 +1,41 @@
+[0.883s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_description -- -j8 -l8
+[1.961s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_description -- -j8 -l8
+[2.048s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_description
+[2.066s] -- Install configuration: ""
+[2.067s] -- Execute custom install script
+[2.068s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/launch/model.launch.py
+[2.068s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/rviz/model.rviz
+[2.069s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/burger.urdf.xacro
+[2.070s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/burger_camera.urdf.xacro
+[2.070s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/turtlebot3_burger.urdf.xacro
+[2.070s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/turtlebot3_waffle_pi.urdf.xacro
+[2.071s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/waffle_pi.urdf.xacro
+[2.072s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/gazebo/burger.gazebo.xacro
+[2.072s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/gazebo/materials.xacro
+[2.073s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/gazebo/waffle_pi.gazebo.xacro
+[2.074s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/burger/base.stl
+[2.075s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/burger/ladar.stl
+[2.075s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/burger/left_tire.stl
+[2.076s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/burger/right_tire.stl
+[2.076s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/waffle_pi/base.stl
+[2.076s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/waffle_pi/ladar.stl
+[2.077s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/waffle_pi/left_tire.stl
+[2.077s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/waffle_pi/right_tire.stl
+[2.082s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/ros2_control/turtlebot3_system.ros2_control.xacro
+[2.082s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/environment/turtlebot3_description.dsv
+[2.083s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/ament_index/resource_index/package_run_dependencies/turtlebot3_description
+[2.083s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/ament_index/resource_index/parent_prefix_path/turtlebot3_description
+[2.084s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/environment/ament_prefix_path.sh
+[2.084s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/environment/ament_prefix_path.dsv
+[2.088s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/environment/path.sh
+[2.088s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/environment/path.dsv
+[2.088s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.bash
+[2.088s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.sh
+[2.088s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.zsh
+[2.088s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.dsv
+[2.088s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/package.dsv
+[2.104s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/ament_index/resource_index/packages/turtlebot3_description
+[2.106s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/cmake/turtlebot3_descriptionConfig.cmake
+[2.106s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/cmake/turtlebot3_descriptionConfig-version.cmake
+[2.107s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_description/share/turtlebot3_description/package.xml
+[2.116s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pederba/sesasr_project_ws/install/turtlebot3_teleop:/home/pederba/sesasr_project_ws/install/turtlebot3_example:/home/pederba/sesasr_project_ws/install/project_pkg:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_description

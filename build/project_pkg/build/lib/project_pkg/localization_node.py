@@ -35,10 +35,12 @@ class LocalizationNode(Node):
             10)
         self.__ekf_pub
 
-        self.ekf_period_s = 0.01
+        self.declare_parameter('ekf_period_s', 0.005)
+
+        self.ekf_period_s = self.get_parameter('ekf_period_s').value
         self.timer = self.create_timer(
             self.ekf_period_s,
-            self.ekf_step
+            self.ekf_predict
         )
 
         self.initial_pose = np.array([[-0.5, -0.5, 0.0]]).T
@@ -84,7 +86,7 @@ class LocalizationNode(Node):
         quaternion = Quaternion()
         quaternion.x, quaternion.y, quaternion.z, quaternion.w = tft.quaternion_from_euler(0, 0, self.ekf.mu[2,0])
         msg.pose.pose.orientation = quaternion
-        # msg.pose.covariance = self.ekf.Sigma.flatten()
+        #msg.pose.covariance = self.ekf.Sigma.flatten()
         self.__ekf_pub.publish(msg)
 
     def ground_truth_callback(self, msg):
@@ -107,7 +109,7 @@ class LocalizationNode(Node):
         _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
 
-    def ekf_step(self):
+    def ekf_predict(self):
         u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0])
         self.ekf.predict(u=u)
         self.prev_pose = self.odom_pose.copy()

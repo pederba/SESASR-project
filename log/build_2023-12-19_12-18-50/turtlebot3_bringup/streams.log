@@ -1,0 +1,44 @@
+[2.652s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_bringup': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_bringup -- -j8 -l8
+[3.398s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_bringup' returned '0': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:/opt/ros/humble /usr/bin/cmake --build /home/pederba/sesasr_project_ws/build/turtlebot3_bringup -- -j8 -l8
+[3.936s] Invoking command in '/home/pederba/sesasr_project_ws/build/turtlebot3_bringup': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_bringup
+[3.946s] -- Install configuration: ""
+[3.947s] -- Execute custom install script
+[3.948s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/base.launch.py
+[3.948s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/fake.launch.py
+[3.949s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/gazebo.launch.py
+[3.950s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/hardware.launch.py
+[3.950s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/lab03.launch.py
+[3.950s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/config/burger/gazebo_controller_manager.yaml
+[3.952s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/config/burger/hardware_controller_manager.yaml
+[3.952s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/config/burger/twist_mux.yaml
+[3.952s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/config/waffle_pi/gazebo_controller_manager.yaml
+[3.952s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/config/waffle_pi/hardware_controller_manager.yaml
+[3.953s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/config/waffle_pi/twist_mux.yaml
+[3.953s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/script/99-turtlebot3-cdc.rules
+[3.954s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/script/create_udev_rules
+[3.954s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/empty_world.model
+[3.954s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/lab03.world
+[3.954s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/turtlebot3_world.model
+[3.955s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/turtlebot3_world/meshes/hexagon.dae
+[3.955s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/turtlebot3_world/meshes/wall.dae
+[3.956s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/turtlebot3_world/model-1_4.sdf
+[3.957s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/turtlebot3_world/model.config
+[3.957s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/worlds/turtlebot3_world/model.sdf
+[3.957s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/rviz/turtlebot3.rviz
+[3.957s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/environment/turtlebot3_bringup.dsv
+[3.958s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/ament_index/resource_index/package_run_dependencies/turtlebot3_bringup
+[3.958s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/ament_index/resource_index/parent_prefix_path/turtlebot3_bringup
+[3.958s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/environment/ament_prefix_path.sh
+[3.958s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/environment/ament_prefix_path.dsv
+[3.959s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/environment/path.sh
+[3.959s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/environment/path.dsv
+[3.959s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/local_setup.bash
+[3.959s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/local_setup.sh
+[3.960s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/local_setup.zsh
+[3.960s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/local_setup.dsv
+[3.961s] -- Symlinking: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/package.dsv
+[3.986s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/ament_index/resource_index/packages/turtlebot3_bringup
+[3.986s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/cmake/turtlebot3_bringupConfig.cmake
+[3.987s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/cmake/turtlebot3_bringupConfig-version.cmake
+[3.987s] -- Up-to-date symlink: /home/pederba/sesasr_project_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/package.xml
+[4.880s] Invoked command in '/home/pederba/sesasr_project_ws/build/turtlebot3_bringup' returned '0': AMENT_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pederba/sesasr_project_ws/install/turtlebot3_description:/opt/ros/humble /usr/bin/cmake --install /home/pederba/sesasr_project_ws/build/turtlebot3_bringup

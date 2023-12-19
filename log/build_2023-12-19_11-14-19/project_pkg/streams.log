@@ -1,0 +1,25 @@
+[7.330s] Invoking command in '/home/pederba/sesasr_project_ws/src/project_pkg': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed
+[8.732s] running egg_info
+[8.814s] writing ../../build/project_pkg/project_pkg.egg-info/PKG-INFO
+[8.814s] writing dependency_links to ../../build/project_pkg/project_pkg.egg-info/dependency_links.txt
+[8.814s] writing entry points to ../../build/project_pkg/project_pkg.egg-info/entry_points.txt
+[8.815s] writing requirements to ../../build/project_pkg/project_pkg.egg-info/requires.txt
+[8.815s] writing top-level names to ../../build/project_pkg/project_pkg.egg-info/top_level.txt
+[8.932s] reading manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[8.935s] writing manifest file '../../build/project_pkg/project_pkg.egg-info/SOURCES.txt'
+[8.936s] running build
+[8.936s] running build_py
+[8.939s] running install
+[8.939s] /home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[8.945s]   warnings.warn(
+[8.954s] running install_lib
+[9.059s] running install_data
+[9.163s] copying config/localization_params.yaml -> /home/pederba/sesasr_project_ws/install/project_pkg/share/project_pkg/config
+[9.224s] running install_egg_info
+[9.291s] removing '/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[9.293s] Copying ../../build/project_pkg/project_pkg.egg-info to /home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg-0.0.0-py3.10.egg-info
+[9.294s] running install_scripts
+[9.543s] Installing localization_node script to /home/pederba/sesasr_project_ws/install/project_pkg/lib/project_pkg
+[9.547s] Installing recorder script to /home/pederba/sesasr_project_ws/install/project_pkg/lib/project_pkg
+[9.547s] writing list of installed files to '/home/pederba/sesasr_project_ws/build/project_pkg/install.log'
+[10.105s] Invoked command in '/home/pederba/sesasr_project_ws/src/project_pkg' returned '0': PYTHONPATH=/home/pederba/sesasr_project_ws/build/project_pkg/prefix_override:/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/project_pkg build --build-base /home/pederba/sesasr_project_ws/build/project_pkg/build install --record /home/pederba/sesasr_project_ws/build/project_pkg/install.log --single-version-externally-managed
