@@ -54,8 +54,8 @@ class LocalizationNode(Node):
         # noise parameters
         self.std_lin_vel = 0.1  # [m/s]
         self.std_ang_vel = np.deg2rad(1.0)  # [rad/s]
-        self.std_rng = 0.1  # [m]
-        self.std_brg = np.deg2rad(0.5)  # [rad]
+        self.std_rng = 0.3  # [m]
+        self.std_brg = np.deg2rad(1)  # [rad]
 
         # parameters for measurement model (z_landmarks())
         self.max_range = 8  # [m]
@@ -74,7 +74,7 @@ class LocalizationNode(Node):
         self.ekf.mu = self.initial_pose
         self.ekf.Sigma = self.initial_covariance
         self.ekf.Mt = np.diag([self.std_rot1**2, self.std_transl**2, self.std_rot2**2]) # motion noise
-        self.ekf.Qt = np.diag([self.std_rng**2, self.std_brg**2]) # measurement noise
+        self.ekf.Qt = np.diag([1, 0.5]) # measurement noise
 
         self.odom_pose = self.initial_pose.copy()
         self.prev_pose = self.initial_pose.copy()
@@ -100,7 +100,6 @@ class LocalizationNode(Node):
             z = z_landmark(true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
             if z is not None:
                 self.ekf.update(z[:,0], lmark, residual=residual)
-
         self.publish_ekf()
 
     def odom_callback(self, msg):
@@ -113,7 +112,7 @@ class LocalizationNode(Node):
         u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0])
         self.ekf.predict(u=u)
         self.prev_pose = self.odom_pose.copy()
-        #self.publish_ekf()
+        self.publish_ekf()
 
 
 
