@@ -103,8 +103,8 @@ class LocalizationNode(Node):
         self.publish_ekf()
 
     def odom_callback(self, msg):
-        x_pose = msg.pose.pose.position.x + self.initial_pose[0,0]
-        y_pose = msg.pose.pose.position.y + self.initial_pose[1,0]
+        x_pose = msg.pose.pose.position.x + self.initial_pose[0,0] # Adjust for offset between the odom frame and the map frame
+        y_pose = msg.pose.pose.position.y + self.initial_pose[1,0] #
         _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
 

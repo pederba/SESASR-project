@@ -6,17 +6,19 @@ filter = np.load("filter.npy")
 odom = np.load("odom.npy")
 ground_truth = np.load("ground_truth.npy")
 
-max_allowed_size = min(len(filter), len(odom), len(ground_truth))
+# adjust data size to fit each other
+max_allowed_length = min(len(filter), len(odom), len(ground_truth))
 
-filter_indexes = np.arange(0, max_allowed_size, int(len(filter)/max_allowed_size))
-filter = filter[filter_indexes]
+filter_indices = np.linspace(0, len(filter)-1, max_allowed_length, dtype=int)
+filter = filter[filter_indices]
 
-odom_indexes = np.arange(0, max_allowed_size, int(len(odom)/max_allowed_size))
-odom = odom[odom_indexes]
+odom_indices = np.linspace(0, len(odom)-1, max_allowed_length, dtype=int)
+odom = odom[odom_indices]
 
-ground_truth_indexes = np.arange(0, max_allowed_size, int(len(ground_truth)/max_allowed_size))
-ground_truth = ground_truth[ground_truth_indexes]
+ground_truth_indices = np.linspace(0, len(ground_truth)-1, max_allowed_length, dtype=int)
+ground_truth = ground_truth[ground_truth_indices]
 
+# compute errors
 position_rmse = math.sqrt(np.mean((filter[:,0] - ground_truth[:,0])**2 + (filter[:,1] - ground_truth[:,1])**2))
 position_max_abs_error = np.max(np.abs(filter[:,0] - ground_truth[:,0]) + np.abs(filter[:,1] - ground_truth[:,1]))
 position_total_cumulative_error = np.sum(np.abs(filter[:,0] - ground_truth[:,0]) + np.abs(filter[:,1] - ground_truth[:,1]))
