@@ -1,0 +1,7 @@
+Position RMSE: 0.19373336406109964
+Position max abs error: 0.9404335426852637
+Position total cumulative error: 153.41904193740146
+Position error percentage: 0.0003989144899966118
+Orientation RMSE: 1.7454684593155676
+Orientation max abs error: 3.501963029836946
+Orientation total cumulative error: 1002.7105094393389
