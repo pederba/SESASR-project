@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import math
 import json
 
-from project_pkg.localization_node import localization_node.ekf.Qt, localization_node.ekf.Mt
+from project_pkg.localization_node import Mt, Qt, initial_pose
 
 filter = np.load("filter.npy")
 odom = np.load("odom.npy")
@@ -32,11 +32,11 @@ orientation_max_abs_error = np.max(np.abs(filter[:,2] - ground_truth[:,2]))
 orientation_total_cumulative_error = np.sum(np.abs(filter[:,2] - ground_truth[:,2]))
 
 # write the values to a .json file
-with open('results.json', 'w') as f:
+with open('results.json', 'a') as f:
     json.dump({
-        "Qt": localization_node.ekf.Qt,
-        "Mt": localization_node.ekf.Mt,
-
+        "Qt diagonal": Qt.diagonal().tolist(),
+        "Mt diagonal": Mt.diagonal().tolist(),
+        
         "position_rmse": position_rmse,
         "position_max_abs_error": position_max_abs_error,
         "position_total_cumulative_error": position_total_cumulative_error,
@@ -52,24 +52,27 @@ with open('results.json', 'w') as f:
 
 # plot 
 plt.plot(filter[:,0], filter[:,1], label="filter")
-plt.plot(odom[:,0], odom[:,1], label="odom")
+plt.plot(odom[:,0] + initial_pose[0,0], odom[:,1] + initial_pose[1,0], label="odom")
 plt.plot(ground_truth[:,0], ground_truth[:,1], label="ground truth")
 plt.legend()
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Position")
-plt.savefig("position.png")
+filename = f"position_Qt_{Qt.diagonal()}_Mt_{Mt.diagonal()}.png"
+plt.savefig("plots/" + filename)
 plt.close()
 
 plt.plot(np.sqrt((filter[:,0] - ground_truth[:,0])**2 + (filter[:,1] - ground_truth[:,1])**2))
 plt.title("Position error")
 plt.xlabel("time")
 plt.ylabel("error")
-plt.savefig("position_error.png")
+filename = f"position_error_Qt_{Qt.diagonal()}_Mt_{Mt.diagonal()}.png"
+plt.savefig("plots/" + filename)
 plt.close()
 
 plt.plot(np.abs(filter[:,2] - ground_truth[:,2]))
 plt.title("Orientation error")
 plt.xlabel("time")
 plt.ylabel("error")
-plt.savefig("orientation_error.png")
+filename = f"orientation_error_Qt_{Qt.diagonal()}_Mt_{Mt.diagonal()}.png"
+plt.savefig("plots/" + filename)
