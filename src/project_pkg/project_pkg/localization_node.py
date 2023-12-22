@@ -10,6 +10,10 @@ from project_pkg.ekf import RobotEKF
 from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, get_odometry_input
 from project_pkg.measurement_model import eval_Ht, eval_hx, z_landmark, residual
 
+Qt = np.diag([1, 0.5]) # measurement noise
+Mt = np.diag([0.1**2, 0.3**2, 0.1**2]) # motion noise
+initial_pose = np.array([[-0.5, -0.5, 0.0]]).T
+
 
 class LocalizationNode(Node):
     def __init__(self):   
@@ -43,7 +47,6 @@ class LocalizationNode(Node):
             self.ekf_predict
         )
 
-        self.initial_pose = np.array([[-0.5, -0.5, 0.0]]).T
         self.initial_covariance = np.diag([0.1, 0.1, 0.1])
         self.landmarks = np.array([[0,0], [1,0], [1,1], [0,1], [-1,1], [-1,0], [-1,-1], [0,-1], [1,-1]])
 
@@ -71,10 +74,10 @@ class LocalizationNode(Node):
             eval_hx=eval_hx,
             eval_Ht=eval_Ht
         )
-        self.ekf.mu = self.initial_pose
+        self.ekf.mu = initial_pose
         self.ekf.Sigma = self.initial_covariance
-        self.ekf.Mt = np.diag([self.std_rot1**2, self.std_transl**2, self.std_rot2**2]) # motion noise
-        self.ekf.Qt = np.diag([1, 0.5]) # measurement noise
+        self.ekf.Mt = Mt
+        self.ekf.Qt = Qt
 
         self.odom_pose = self.initial_pose.copy()
         self.prev_pose = self.initial_pose.copy()

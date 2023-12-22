@@ -70,35 +70,3 @@ def main(args=None):
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-    
-
-            # Create the subscribers and synchronize the messages
-#        self.odom_sub = message_filters.Subscriber(self, Odometry, "/diff_drive_controller/odom")
-#        self.filter_sub = message_filters.Subscriber(self, Odometry, "/ekf")
-#        self.ground_truth_sub = message_filters.Subscriber(self, Odometry, "/ground_truth")
-#        self.ts = message_filters.ApproximateTimeSynchronizer(
-#            [self.odom_sub, self.filter_sub, self.ground_truth_sub], 10, 0.5,
-#        )
-#        self.ts.registerCallback(self.store_data)
-#
-#        self.odom = []
-#        self.filter = []
-#        self.ground_truth = []
-#
-#        
-#
-#    def store_data(self, odom, filter, ground_truth):
-#        self.get_logger().info(f"Storing data... Current length {len(self.odom)}")
-#        _, _, yaw = tf_transformations.euler_from_quaternion([odom.pose.pose.orientation.x, odom.pose.pose.orientation.y, odom.pose.pose.orientation.z, odom.pose.pose.orientation.w])
-#        self.odom.append([odom.pose.pose.position.x, odom.pose.pose.position.y, yaw])  # Insert the data that you want to save in the lists
-#
-#        _, _, yaw = tf_transformations.euler_from_quaternion([filter.pose.pose.orientation.x, filter.pose.pose.orientation.y, filter.pose.pose.orientation.z, filter.pose.pose.orientation.w])
-#        self.filter.append([filter.pose.pose.position.x, filter.pose.pose.position.y, yaw]) # Insert the data that you want to save in the lists
-#        
-#        _, _, yaw = tf_transformations.euler_from_quaternion([ground_truth.pose.pose.position.x, ground_truth.pose.pose.position.y, ground_truth.pose.pose.orientation.z, ground_truth.pose.pose.orientation.w])
-#        self.ground_truth.append([ground_truth.pose.pose.position.x, ground_truth.pose.pose.position.y, yaw]) # Insert the data that you want to save in the lists
