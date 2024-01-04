@@ -1,0 +1,6 @@
+build/
+install/*
+log/*
+site/*
+src/turtlebot3*
+workspaces/SESASR-project/build
