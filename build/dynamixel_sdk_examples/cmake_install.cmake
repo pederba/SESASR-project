@@ -1,8 +1,8 @@
-# Install script for directory: /home/pederba/sesasr_project_ws/src/turtlebot3/utils/DynamixelSDK/dynamixel_sdk_examples
+# Install script for directory: /workspaces/SESASR-project/src/turtlebot3/utils/DynamixelSDK/dynamixel_sdk_examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pederba/sesasr_project_ws/install/dynamixel_sdk_examples")
+  set(CMAKE_INSTALL_PREFIX "/workspaces/SESASR-project/install/dynamixel_sdk_examples")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/pederba/sesasr_project_ws/build/dynamixel_sdk_examples/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/workspaces/SESASR-project/build/dynamixel_sdk_examples/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pederba/sesasr_project_ws/build/dynamixel_sdk_examples/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspaces/SESASR-project/build/dynamixel_sdk_examples/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pederba/sesasr_project_ws/build/dynamixel_sdk/libdynamixel_sdk.so" "TARGETS" "dynamixel_sdk" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/workspaces/SESASR-project/build/dynamixel_sdk/libdynamixel_sdk.so" "TARGETS" "dynamixel_sdk" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

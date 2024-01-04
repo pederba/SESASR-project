@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo
+CMAKE_SOURCE_DIR = /workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pederba/sesasr_project_ws/build/turtlebot3_gazebo
+CMAKE_BINARY_DIR = /workspaces/SESASR-project/build/turtlebot3_gazebo
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/pederba/sesasr_project_ws/build/turtlebot3_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo /home/pederba/sesasr_project_ws/build/turtlebot3_gazebo /home/pederba/sesasr_project_ws/build/turtlebot3_gazebo /home/pederba/sesasr_project_ws/build/turtlebot3_gazebo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/SESASR-project/build/turtlebot3_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo /workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo /workspaces/SESASR-project/build/turtlebot3_gazebo /workspaces/SESASR-project/build/turtlebot3_gazebo /workspaces/SESASR-project/build/turtlebot3_gazebo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

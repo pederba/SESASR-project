@@ -1,8 +1,8 @@
-# Install script for directory: /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_bringup
+# Install script for directory: /workspaces/SESASR-project/src/turtlebot3/turtlebot3_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pederba/sesasr_project_ws/install/turtlebot3_bringup")
+  set(CMAKE_INSTALL_PREFIX "/workspaces/SESASR-project/install/turtlebot3_bringup")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/pederba/sesasr_project_ws/build/turtlebot3_bringup/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/workspaces/SESASR-project/build/turtlebot3_bringup/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pederba/sesasr_project_ws/build/turtlebot3_bringup/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspaces/SESASR-project/build/turtlebot3_bringup/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

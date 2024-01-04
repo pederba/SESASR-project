@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/pederba/sesasr_project_ws/install/turtlebot3_fake_node/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/SESASR-project/install/turtlebot3_fake_node/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/pederba/sesasr_project_ws/install/turtlebot3_fake_node/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/SESASR-project/install/turtlebot3_fake_node/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/pederba/sesasr_project_ws/install/turtlebot3_fake_node/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/SESASR-project/install/turtlebot3_fake_node/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/pederba/sesasr_project_ws/install/turtlebot3_fake_node/${destination}")
+      set(destination "/workspaces/SESASR-project/install/turtlebot3_fake_node/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,58 +311,58 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "turtlebot3_fake_node" "DESTINATION" "lib/turtlebot3_fake_node")
-include("/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "param" "DESTINATION" "share/turtlebot3_fake_node")
-ament_cmake_symlink_install_directory("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" DIRECTORY "launch" "param" "DESTINATION" "share/turtlebot3_fake_node")
+ament_cmake_symlink_install_directory("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" DIRECTORY "launch" "param" "DESTINATION" "share/turtlebot3_fake_node")
 
 # install(DIRECTORY "include/" "DESTINATION" "include/")
-ament_cmake_symlink_install_directory("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" DIRECTORY "include/" "DESTINATION" "include/")
+ament_cmake_symlink_install_directory("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" DIRECTORY "include/" "DESTINATION" "include/")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_fake_node/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_fake_node/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_fake_node/environment")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_fake_node/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_fake_node/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_fake_node/environment")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_fake_node/environment")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_fake_node")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_fake_node")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_fake_node")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_fake_node")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_fake_node")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_fake_node")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_fake_node")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_fake_node")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_fake_node")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_fake_node")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_fake_node")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_fake_node")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_fake_node")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_fake_node")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_fake_node")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_fake_node")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_fake_node")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_fake_node")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_fake_node")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_fake_node")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_fake_node" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig.cmake" "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig-version.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig.cmake" "/home/pederba/sesasr_project_ws/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig-version.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig.cmake" "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig-version.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig.cmake" "/workspaces/SESASR-project/build/turtlebot3_fake_node/ament_cmake_core/turtlebot3_fake_nodeConfig-version.cmake" "DESTINATION" "share/turtlebot3_fake_node/cmake")
 
-# install(FILES "/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node/package.xml" "DESTINATION" "share/turtlebot3_fake_node")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node/package.xml" "DESTINATION" "share/turtlebot3_fake_node")
+# install(FILES "/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node/package.xml" "DESTINATION" "share/turtlebot3_fake_node")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node" FILES "/workspaces/SESASR-project/src/turtlebot3/turtlebot3_simulations/turtlebot3_fake_node/package.xml" "DESTINATION" "share/turtlebot3_fake_node")

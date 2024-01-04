@@ -10,7 +10,7 @@ from project_pkg.ekf import RobotEKF
 from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, get_odometry_input
 from project_pkg.measurement_model import eval_Ht, eval_hx, z_landmark, residual
 
-Qt = np.diag([100, 100]) # measurement noise
+Qt = np.diag([10, 10]) # measurement noise
 Mt = np.diag([0.1, 0.1, 0.1]) # motion noise
 
 initial_pose = np.array([[-0.5, -0.5, 0.0]]).T

@@ -1,7 +1,0 @@
-/home/pederba/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
-  warnings.warn(
-  File "/home/pederba/sesasr_project_ws/install/project_pkg/lib/python3.10/site-packages/project_pkg/plotter.py", line 6
-    from project_pkg.localization_node import localization_node.ekf.Qt, localization_node.ekf.Mt
-                                                               ^
-SyntaxError: invalid syntax
-

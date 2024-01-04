@@ -1,1 +1,1 @@
-/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_navigation2/launch/navigation2.launch.py
+/workspaces/SESASR-project/src/turtlebot3/turtlebot3_navigation2/launch/navigation2.launch.py

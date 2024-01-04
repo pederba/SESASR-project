@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/pederba/sesasr_project_ws/install/turtlebot3_description/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/SESASR-project/install/turtlebot3_description/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/pederba/sesasr_project_ws/install/turtlebot3_description/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/SESASR-project/install/turtlebot3_description/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/pederba/sesasr_project_ws/install/turtlebot3_description/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/SESASR-project/install/turtlebot3_description/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/pederba/sesasr_project_ws/install/turtlebot3_description/${destination}")
+      set(destination "/workspaces/SESASR-project/install/turtlebot3_description/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,49 +311,49 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "launch" "rviz" "urdf" "gazebo" "meshes" "ros2_control" "DESTINATION" "share/turtlebot3_description")
-ament_cmake_symlink_install_directory("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" DIRECTORY "launch" "rviz" "urdf" "gazebo" "meshes" "ros2_control" "DESTINATION" "share/turtlebot3_description")
+ament_cmake_symlink_install_directory("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" DIRECTORY "launch" "rviz" "urdf" "gazebo" "meshes" "ros2_control" "DESTINATION" "share/turtlebot3_description")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/turtlebot3_description.dsv" "DESTINATION" "share/turtlebot3_description/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/turtlebot3_description.dsv" "DESTINATION" "share/turtlebot3_description/environment")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/turtlebot3_description.dsv" "DESTINATION" "share/turtlebot3_description/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/turtlebot3_description.dsv" "DESTINATION" "share/turtlebot3_description/environment")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_description/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_description/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_description/environment")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_description/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_description/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_description/environment")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_description/environment")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_description")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_description")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_description")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_description")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_description")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_description")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_description")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_description")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_description")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_description")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_description")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_description")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_description")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_description")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_description")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_description")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_description")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_description")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_description")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_description")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_description" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig.cmake" "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig-version.cmake" "DESTINATION" "share/turtlebot3_description/cmake")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig.cmake" "/home/pederba/sesasr_project_ws/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig-version.cmake" "DESTINATION" "share/turtlebot3_description/cmake")
+# install(FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig.cmake" "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig-version.cmake" "DESTINATION" "share/turtlebot3_description/cmake")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig.cmake" "/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_core/turtlebot3_descriptionConfig-version.cmake" "DESTINATION" "share/turtlebot3_description/cmake")
 
-# install(FILES "/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description/package.xml" "DESTINATION" "share/turtlebot3_description")
-ament_cmake_symlink_install_files("/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description" FILES "/home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_description/package.xml" "DESTINATION" "share/turtlebot3_description")
+# install(FILES "/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description/package.xml" "DESTINATION" "share/turtlebot3_description")
+ament_cmake_symlink_install_files("/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description" FILES "/workspaces/SESASR-project/src/turtlebot3/turtlebot3_description/package.xml" "DESTINATION" "share/turtlebot3_description")
