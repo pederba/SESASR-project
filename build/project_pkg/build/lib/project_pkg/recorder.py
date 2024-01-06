@@ -9,6 +9,8 @@ class RecorderNode(Node):
       super().__init__("my_node")
       self.get_logger().info("Initializing my_node")
 
+      self.__save_data_timer = self.create_timer(1.0, self.save_data)
+
       self.__ground_truth_sub = self.create_subscription(
          Odometry,
          '/ground_truth',

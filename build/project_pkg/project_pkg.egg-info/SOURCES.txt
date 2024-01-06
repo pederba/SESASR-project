@@ -10,6 +10,7 @@ setup.py
 ../../build/project_pkg/project_pkg.egg-info/zip-safe
 config/localization_params.yaml
 launch/localization.launch.py
+launch/localization_cmd_vel_bag.launch.py
 project_pkg/__init__.py
 project_pkg/ekf.py
 project_pkg/localization_node.py
@@ -17,11 +18,8 @@ project_pkg/measurement_model.py
 project_pkg/motion_models.py
 project_pkg/plotter.py
 project_pkg/recorder.py
-project_pkg.egg-info/PKG-INFO
-project_pkg.egg-info/SOURCES.txt
-project_pkg.egg-info/dependency_links.txt
-project_pkg.egg-info/entry_points.txt
-project_pkg.egg-info/requires.txt
-project_pkg.egg-info/top_level.txt
-project_pkg.egg-info/zip-safe
+project_pkg/transform_node.py
 resource/project_pkg
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

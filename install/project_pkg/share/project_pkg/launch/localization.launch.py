@@ -22,6 +22,13 @@ def generate_launch_description():
             output='screen'
         ),
 
+        Node(
+            package='project_pkg',
+            executable='transform_node',
+            name='transform_node',
+            parameters=[config]
+        ),
+
         ExecuteProcess(
             cmd=['xterm', '-e', 'ros2 run turtlebot3_teleop teleop_keyboard'], # remember to export TURTLEBOT3_MODEL=burger
             output='screen'

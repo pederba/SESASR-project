@@ -3,6 +3,7 @@ import sympy
 from sympy import symbols, Matrix
 from numpy.random import randn # function to get a random number from a Gaussian distribution
 
+
 # Landmark measurement model
 x, y, theta, mx, my = symbols('x y theta mx my')
 hx = Matrix([[sympy.sqrt((mx - x)**2 + (my - y)**2)], 

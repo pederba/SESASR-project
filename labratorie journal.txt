@@ -1,0 +1,4 @@
+04.01.2024
+Har sett på ekf i dag det ser ut til at det er en form for gimbal lock 
+når man går fra å ikke kunne se noen landmark til at man ser landmarks.
+Det kan være interessant å se på hvordan yaw, z og z_hat variablene endrer seg 

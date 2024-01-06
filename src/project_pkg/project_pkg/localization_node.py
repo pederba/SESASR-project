@@ -10,8 +10,11 @@ from project_pkg.ekf import RobotEKF
 from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, get_odometry_input
 from project_pkg.measurement_model import eval_Ht, eval_hx, z_landmark, residual
 
-Qt = np.diag([10, 10]) # measurement noise
-Mt = np.diag([0.1, 0.1, 0.1]) # motion noise
+from geometry_msgs.msg import TransformStamped
+from tf2_ros import TransformBroadcaster
+
+#Qt = np.diag([10, 10]) # measurement noise
+#Mt = np.diag([1, 1, 1]) # motion noise
 
 initial_pose = np.array([[-0.5, -0.5, 0.0]]).T
 
@@ -22,7 +25,7 @@ class LocalizationNode(Node):
 
         self.__ground_truth_sub = self.create_subscription(
             Odometry,
-            '/ground_truth',
+            '/ground_truth_odom_frame',
             self.ground_truth_callback,
             10)
         self.__ground_truth_sub
@@ -40,13 +43,51 @@ class LocalizationNode(Node):
             10)
         self.__ekf_pub
 
+        self.__landmark_debug_pub = self.create_publisher(
+            Odometry,
+            '/landmark_debug',
+            10)
+
+        self.__z_debug_pub = self.create_publisher(
+            Odometry,
+            '/z_debug',
+            10)
+        
+        self.__z_hat_debug_pub = self.create_publisher(
+            Odometry,
+            '/z_hat_debug',
+            10)
+        
+        self.__yaw_debug_pub = self.create_publisher(
+            Odometry,
+            '/yaw_debug',
+            10)
+        
+        self.__res_debug_pub = self.create_publisher(
+            Odometry,
+            '/res_debug',
+            10)
+        
         self.declare_parameter('ekf_period_s', 0.005)
+        self.declare_parameter('Qt_0', 0.01)
+        self.declare_parameter('Qt_1', 0.01)
+        self.declare_parameter('Mt_0', 0.01)
+        self.declare_parameter('Mt_1', 0.01)
+        self.declare_parameter('Mt_2', 0.01)
 
         self.ekf_period_s = self.get_parameter('ekf_period_s').value
+        Qt_0 = self.get_parameter('Qt_0').value
+        Qt_1 = self.get_parameter('Qt_1').value
+        Mt_0 = self.get_parameter('Mt_0').value
+        Mt_1 = self.get_parameter('Mt_1').value
+        Mt_2 = self.get_parameter('Mt_2').value
+
         self.timer = self.create_timer(
             self.ekf_period_s,
             self.ekf_predict
         )
+        Qt = np.diag([Qt_0, Qt_1]) # measurement noise
+        Mt = np.diag([Mt_0, Mt_1, Mt_2]) # motion noise
 
         self.initial_covariance = np.diag([0.1, 0.1, 0.1])
         self.landmarks = np.array([[0,0], [1,0], [1,1], [0,1], [-1,1], [-1,0], [-1,-1], [0,-1], [1,-1]])
@@ -55,7 +96,7 @@ class LocalizationNode(Node):
         self.std_transl = 0.3
         self.std_rot2 = np.deg2rad(1.0)
 
-        # noise parameters
+        # noise parameters for motion model
         self.std_lin_vel = 0.1  # [m/s]
         self.std_ang_vel = np.deg2rad(1.0)  # [rad/s]
         self.std_rng = 0.3  # [m]
@@ -83,8 +124,12 @@ class LocalizationNode(Node):
         self.odom_pose = initial_pose.copy()
         self.prev_pose = initial_pose.copy()
 
+
     def publish_ekf(self):
         msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = 'odom'
+        msg.child_frame_id = 'base_footprint'
         msg.pose.pose.position.x = self.ekf.mu[0,0]
         msg.pose.pose.position.y = self.ekf.mu[1,0]
         quaternion = Quaternion()
@@ -93,16 +138,68 @@ class LocalizationNode(Node):
         #msg.pose.covariance = self.ekf.Sigma.flatten()
         self.__ekf_pub.publish(msg)
 
+    def publish_debug(self, z, z_hat, true_pose):
+        msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = 'odom'
+        msg.child_frame_id = 'base_footprint'
+        msg.pose.pose.position.x = z[0][0]
+        msg.pose.pose.position.y = z[1][0]
+        quaternion = Quaternion()
+        quaternion.x, quaternion.y, quaternion.z, quaternion.w = tft.quaternion_from_euler(0, 0, 0)
+        msg.pose.pose.orientation = quaternion
+        #msg.pose.covariance = self.ekf.Sigma.flatten()
+        self.__landmark_debug_pub.publish(msg)
+
+        msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = 'odom'
+        msg.child_frame_id = 'base_footprint'
+        msg.pose.pose.position.x = z_hat[0][0]
+        msg.pose.pose.position.y = z_hat[1][0]
+        quaternion = Quaternion()
+        quaternion.x, quaternion.y, quaternion.z, quaternion.w = tft.quaternion_from_euler(0, 0, 0)
+        msg.pose.pose.orientation = quaternion
+        self.__z_hat_debug_pub.publish(msg)
+
+        msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = 'odom'
+        msg.child_frame_id = 'base_footprint'
+        msg.pose.pose.position.x = float(true_pose[0])
+        msg.pose.pose.position.y = float(true_pose[1])
+        msg.pose.pose.position.z = float(true_pose[2])
+        quaternion = Quaternion()
+        quaternion.x, quaternion.y, quaternion.z, quaternion.w = tft.quaternion_from_euler(0, 0, 0)
+        msg.pose.pose.orientation = quaternion
+        self.__yaw_debug_pub.publish(msg)
+
+        res = z[:, 0] - z_hat[:, 0]
+        msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = 'odom'
+        msg.child_frame_id = 'base_footprint'
+        msg.pose.pose.position.x = res[0]
+        msg.pose.pose.position.y = res[1]
+        quaternion = Quaternion()
+        quaternion.x, quaternion.y, quaternion.z, quaternion.w = tft.quaternion_from_euler(0, 0, 0)
+        msg.pose.pose.orientation = quaternion
+        self.__res_debug_pub.publish(msg)
+
     def ground_truth_callback(self, msg):
         x_pose_true = msg.pose.pose.position.x
         y_pose_true = msg.pose.pose.position.y
         _, _, yaw_true = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         true_pose = np.array([[x_pose_true, y_pose_true, yaw_true]]).T
-
+        
         # Simulate measuring landmarks
         for lmark in self.landmarks:
             z = z_landmark(true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
             if z is not None:
+                # deleta v
+                z_hat = eval_hx(*self.ekf.mu[:,0], *lmark)                
+                self.publish_debug(z[:,0], z_hat, true_pose)
+                #delete^
                 self.ekf.update(z[:,0], lmark, residual=residual)
         self.publish_ekf()
 

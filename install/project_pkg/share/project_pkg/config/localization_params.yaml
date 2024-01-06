@@ -1,3 +1,8 @@
 localization_node:
   ros__parameters:
     ekf_period_s: 0.01
+    Qt_0: 10
+    Qt_1: 10
+    Mt_0: 0.1
+    Mt_1: 0.1
+    Mt_2: 0.1

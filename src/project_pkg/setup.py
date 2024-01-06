@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'localization_node = project_pkg.localization_node:main',
+            'transform_node = project_pkg.transform_node:main',
             'recorder = project_pkg.recorder:main'
         ],
     },

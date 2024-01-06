@@ -78,7 +78,7 @@ def update(self, z, lmark, residual=np.subtract):
 
     self.y = residual(z[:, 0], z_hat[:, 0])
     self.mu = self.mu + self.K @ (z - z_hat)
-
+    
     # P = (I-KH)P(I-KH)' + KRK' is more numerically stable and works for non-optimal K vs the equation
     # P = (I-KH)P usually seen in the literature. 
     # Note that I is the identity matrix.
