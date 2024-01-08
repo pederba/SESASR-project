@@ -31,6 +31,31 @@ filter = np.load("filter.npy")
 odom = np.load("odom.npy")
 ground_truth = np.load("ground_truth.npy")
 
+# Plot odom data
+plt.scatter(odom[:, 0], odom[:, 1], label="odom")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Odom Data")
+plt.show()
+
+# Plot ground truth data
+plt.scatter(ground_truth[:, 0], ground_truth[:, 1], label="ground truth")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Ground Truth Data")
+plt.show()
+
+# Plot filter data
+plt.scatter(filter[:, 0], filter[:, 1], label="filter")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Filter Data")
+plt.show()
+
+
 # adjust data size to fit each other
 max_allowed_length = min(len(filter), len(odom), len(ground_truth))
 
@@ -76,10 +101,15 @@ with open(filename, 'a') as f:
 landmarks = np.array([[0,0], [1,0], [1,1], [0,1], [-1,1], [-1,0], [-1,-1], [0,-1], [1,-1]])
 
 
+odom_offset = np.copy(odom)
+odom_offset[:, 0] -= 2
+odom_offset[:, 1] -= 0.5
+
+
 # plot 
-plt.plot(filter[:,0], filter[:,1], label="filter")
-plt.plot(odom[:,0] + initial_pose[0,0], odom[:,1] + initial_pose[1,0], label="odom")
-plt.plot(ground_truth[:,0], ground_truth[:,1], label="ground truth")
+plt.scatter(filter[:,0], filter[:,1], label="filter")
+plt.scatter(odom_offset[:,0], odom_offset[:,1], label="odom")
+plt.scatter(ground_truth[:,0], ground_truth[:,1], label="ground truth")
 plt.scatter(landmarks[:,0], landmarks[:,1], color='red', label="landmarks")  # Add this line to plot the landmarks
 plt.legend()
 plt.xlabel("x")

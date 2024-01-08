@@ -20,7 +20,7 @@ class RecorderNode(Node):
 
       self.__odom_sub = self.create_subscription(
          Odometry,
-         '/odom_with_offset',
+         '/diff_drive_controller/odom',
          self.odom_callback,
          10)
       self.__odom_sub
