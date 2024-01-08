@@ -1,3 +1,1 @@
-
-# Response
-int32 position
+/workspaces/SESASR-project/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Response.msg

@@ -1,6 +1,1 @@
-# Constants
-# Request
-uint8 id
----
-# Response
-int32 position
+/workspaces/SESASR-project/src/turtlebot3/utils/DynamixelSDK/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv

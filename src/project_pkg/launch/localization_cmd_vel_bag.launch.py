@@ -52,9 +52,4 @@ def generate_launch_description():
             cmd=['ros2', 'bag', 'play', '/workspaces/SESASR-project/velocity_commands_bag'],
             output='screen'
         ),
-
-        TimerAction(
-            period=30.0,  # Duration in seconds
-            actions=[Shutdown()]
-        ),
     ])

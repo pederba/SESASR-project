@@ -1,7 +1,1 @@
-twist_mux:
-  ros__parameters:
-    topics:
-      external:
-        topic   : cmd_vel
-        timeout : 0.5
-        priority: 1
+/workspaces/SESASR-project/src/turtlebot3/turtlebot3_bringup/config/waffle_pi/twist_mux.yaml

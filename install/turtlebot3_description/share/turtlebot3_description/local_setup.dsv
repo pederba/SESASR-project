@@ -1,3 +1,1 @@
-source;share/turtlebot3_description/environment/ament_prefix_path.sh
-source;share/turtlebot3_description/environment/path.sh
-source;share/turtlebot3_description/environment/turtlebot3_description.dsv
+/workspaces/SESASR-project/build/turtlebot3_description/ament_cmake_environment_hooks/local_setup.dsv

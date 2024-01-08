@@ -54,7 +54,8 @@ orientation_max_abs_error = np.max(np.abs(filter[:,2] - ground_truth[:,2]))
 orientation_total_cumulative_error = np.sum(np.abs(filter[:,2] - ground_truth[:,2]))
 
 # write the values to a .json file
-with open('results.json', 'a') as f:
+filename = f"results_Qt_{Qt.diagonal()}_Mt_{Mt.diagonal()}.json"
+with open(filename, 'a') as f:
     json.dump({
         "Qt diagonal": Qt.diagonal().tolist(),
         "Mt diagonal": Mt.diagonal().tolist(),
@@ -71,11 +72,15 @@ with open('results.json', 'a') as f:
     indent=4
     )
 
+# landmarks
+landmarks = np.array([[0,0], [1,0], [1,1], [0,1], [-1,1], [-1,0], [-1,-1], [0,-1], [1,-1]])
+
 
 # plot 
 plt.plot(filter[:,0], filter[:,1], label="filter")
 plt.plot(odom[:,0] + initial_pose[0,0], odom[:,1] + initial_pose[1,0], label="odom")
 plt.plot(ground_truth[:,0], ground_truth[:,1], label="ground truth")
+plt.scatter(landmarks[:,0], landmarks[:,1], color='red', label="landmarks")  # Add this line to plot the landmarks
 plt.legend()
 plt.xlabel("x")
 plt.ylabel("y")
