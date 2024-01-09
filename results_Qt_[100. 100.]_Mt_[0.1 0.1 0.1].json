@@ -338,4 +338,38 @@
     "orientation_rmse": 1.878566963149312,
     "orientation_max_abs_error": 6.2489640333737455,
     "orientation_total_cumulative_error": 20324.126389169516
+}{
+    "Qt diagonal": [
+        100.0,
+        100.0
+    ],
+    "Mt diagonal": [
+        0.1,
+        0.1,
+        0.1
+    ],
+    "position_rmse": 0.6527814997347811,
+    "position_max_abs_error": 2.6742972761311097,
+    "position_total_cumulative_error": 362.19678164906,
+    "position_error_percentage": 0.00038776781306662126,
+    "orientation_rmse": 2.7400374260022717,
+    "orientation_max_abs_error": 4.487857103909382,
+    "orientation_total_cumulative_error": 1499.1093093481531
+}{
+    "Qt diagonal": [
+        100.0,
+        100.0
+    ],
+    "Mt diagonal": [
+        0.1,
+        0.1,
+        0.1
+    ],
+    "position_rmse": 1.3871599416215852,
+    "position_max_abs_error": 4.907459536604125,
+    "position_total_cumulative_error": 1923.135370697189,
+    "position_error_percentage": 0.00010597333720908764,
+    "orientation_rmse": 2.3443702647425066,
+    "orientation_max_abs_error": 4.794695698531422,
+    "orientation_total_cumulative_error": 2611.7243887754794
 }

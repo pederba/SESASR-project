@@ -8,10 +8,11 @@ from geometry_msgs.msg import Quaternion
 
 from project_pkg.ekf import RobotEKF
 from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, get_odometry_input
-from project_pkg.measurement_model import eval_Ht, eval_hx, z_landmark, residual
+from project_pkg.measurement_model import eval_Ht, eval_hx, z_landmark, residual, inverse_eval_hx
 
 from geometry_msgs.msg import TransformStamped
 from tf2_ros import TransformBroadcaster
+import tf2_ros
 
 #Qt = np.diag([10, 10]) # measurement noise
 #Mt = np.diag([1, 1, 1]) # motion noise
@@ -42,6 +43,16 @@ class LocalizationNode(Node):
             '/ekf',
             10)
         self.__ekf_pub
+
+        self.__ekf_predicted_odom_pub = self.create_publisher(
+            Odometry,
+            '/ekf_predicted_odom',
+            10)
+        
+        self.__ekf_update_pub = self.create_publisher(
+            Odometry,
+            '/ekf_update',
+            10)
 
         self.__landmark_debug_pub = self.create_publisher(
             Odometry,
@@ -192,8 +203,11 @@ class LocalizationNode(Node):
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = 'odom'
         msg.child_frame_id = 'base_footprint'
+        #lmark_from_z = inverse_eval_hx(z, self.true_pose)
+        # msg.pose.pose.position.x = lmark_from_z[0][0]
+        # msg.pose.pose.position.y = lmark_from_z[1][0]
         msg.pose.pose.position.x = z[0][0]
-        msg.pose.pose.position.y = z[1][0]
+        msg.pose.pose.position.x = z[1][0]
         quaternion = Quaternion()
         quaternion.x, quaternion.y, quaternion.z, quaternion.w = tft.quaternion_from_euler(0, 0, 0)
         msg.pose.pose.orientation = quaternion
@@ -235,39 +249,46 @@ class LocalizationNode(Node):
         msg.pose.pose.orientation = quaternion
         self.__res_debug_pub.publish(msg)
 
+    def publish_ekf_prediction(self, predicted_odom):
+        msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = 'odom'
+        msg.child_frame_id = 'base_footprint'
+        msg.pose.pose.position.x = predicted_odom[0]
+        msg.pose.pose.position.y = predicted_odom[1]
+        quaternion = Quaternion()
+        quaternion.x, quaternion.y, quaternion.z, quaternion.w = tft.quaternion_from_euler(0, 0, predicted_odom[2])
+        msg.pose.pose.orientation = quaternion
+        self.__ekf_predicted_odom_pub.publish(msg)
+
     def ground_truth_callback(self, msg):
         x_pose_true = msg.pose.pose.position.x
         y_pose_true = msg.pose.pose.position.y
         _, _, yaw_true = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.true_pose = np.array([[x_pose_true, y_pose_true, yaw_true]]).T
-
-    def odom_callback(self, msg):
-        #TODO add noise to odom
-        x_pose = msg.pose.pose.position.x + initial_pose[0,0] # Adjust for offset between the odom frame and the map frame
-        y_pose = msg.pose.pose.position.y + initial_pose[1,0] #
-        _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
-        
-        self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
-
-    def ekf_predict(self):
-        # Predict
-        # Simulate odometry
-        
-        u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0]) + np.array([[np.random.normal(0, self.std_rot1), np.random.normal(0, self.std_transl), np.random.normal(0, self.std_rot2)]]).T#TODO add noise here?
-        self.ekf.predict(u=u)
-        self.prev_pose = self.odom_pose.copy()
-
-        # Update
         # Simulate measuring landmarks
         for lmark in self.landmarks:
             z = z_landmark(self.true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
             if z is not None:
                 # deleta v
-                z_hat = eval_hx(*self.ekf.mu[:,0], *lmark)                
+                z_hat = eval_hx(*self.ekf.mu[:,0], *lmark)  
                 self.publish_debug(z[:,0], z_hat, self.true_pose)
                 #delete^
                 self.ekf.update(z[:,0], lmark, residual=residual)
+                #self.publish_ekf_update()              
 
+    def odom_callback(self, msg):
+        x_pose = msg.pose.pose.position.x + initial_pose[0,0] # Adjust for offset between the odom frame and the map frame
+        y_pose = msg.pose.pose.position.y + initial_pose[1,0] #
+        _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
+        self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
+        
+    
+    def ekf_predict(self):
+        u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0]) + np.array([[np.random.normal(0, self.std_rot1), np.random.normal(0, self.std_transl), np.random.normal(0, self.std_rot2)]]).T#TODO add noise here?
+        self.ekf.predict(u=u)
+        self.publish_ekf_prediction(self.ekf.mu[:,0])
+        self.prev_pose = self.odom_pose.copy()# Update
         self.publish_ekf()
 
 

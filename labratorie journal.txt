@@ -8,3 +8,8 @@ Tror det er feil i predict stepet. Vi gir inputen som odom sin posisjon, men det
 
 Feilen er at det ikke er lagt in støy i målingene på odometri!!!!
 
+09.01.2024
+Må dra på lab for å finne ut hvor det gir mening å legge inn støyen 
+- std_rot1, std_transl, std_rot2: noise parameters for Odometry m.m.
+- std_lin_vel, std_ang_vel: noise parameters for Velocity m.m.
+

@@ -32,12 +32,28 @@ odom = np.load("odom.npy")
 ground_truth = np.load("ground_truth.npy")
 
 # Plot odom data
-# plt.scatter(odom[:, 0], odom[:, 1], label="odom")
-# plt.legend()
-# plt.xlabel("x")
-# plt.ylabel("y")
-# plt.title("Odom Data")
-# plt.show()
+plt.scatter(odom[:, 0], odom[:, 1], label="odom")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Odom Data")
+plt.show()
+
+# Plot ground truth data
+plt.scatter(ground_truth[:, 0], ground_truth[:, 1], label="ground truth")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Ground Truth Data")
+plt.show()
+
+# Plot filter data
+plt.scatter(filter[:, 0], filter[:, 1], label="filter")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Filter Data")
+plt.show()
 
 
 # adjust data size to fit each other
