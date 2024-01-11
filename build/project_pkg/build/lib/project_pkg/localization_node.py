@@ -17,7 +17,7 @@ import tf2_ros
 #Qt = np.diag([10, 10]) # measurement noise
 #Mt = np.diag([1, 1, 1]) # motion noise
 
-initial_pose = np.array([[-0.5, -0.5, 0.0]]).T
+#initial_pose = np.array([[-0.5, -0.5, 0.0]]).T
 
 
 class LocalizationNode(Node):
@@ -85,7 +85,7 @@ class LocalizationNode(Node):
         self.declare_parameter('Mt_0', 0.01)
         self.declare_parameter('Mt_1', 0.01)
         self.declare_parameter('Mt_2', 0.01)
-        self.declare_parameter('initial_pose', [-0.5, -0.5, 0.0])
+        self.declare_parameter('initial_pose', [-2.0, -0.5, 0.0])
         self.declare_parameter('initial_covariance', [0.1, 0.1, 0.1])
         self.declare_parameter('landmark1', [0,0])
         self.declare_parameter('landmark2', [1,0])
@@ -113,7 +113,7 @@ class LocalizationNode(Node):
         Mt_0 = self.get_parameter('Mt_0').value
         Mt_1 = self.get_parameter('Mt_1').value
         Mt_2 = self.get_parameter('Mt_2').value
-        self.initial_pose = self.get_parameter('initial_pose').value
+        self.initial_pose = np.array([self.get_parameter('initial_pose').value]).T
         self.initial_covariance = self.get_parameter('initial_covariance').value
         # Get landmarks
         self.landmarks = np.array([
@@ -175,15 +175,15 @@ class LocalizationNode(Node):
             eval_hx=eval_hx,
             eval_Ht=eval_Ht
         )
-        self.ekf.mu = initial_pose
+        self.ekf.mu = self.initial_pose
         self.ekf.Sigma = self.initial_covariance
         self.ekf.Mt = Mt
         self.ekf.Qt = Qt
-
-        self.odom_pose = initial_pose.copy()
-        self.prev_pose = initial_pose.copy()
-        self.true_pose = initial_pose.copy()
-
+        
+        self.odom_pose = self.initial_pose.copy()
+        self.prev_pose = self.initial_pose.copy()
+        self.true_pose = self.initial_pose.copy()
+        self.z = None
 
     def publish_ekf(self):
         msg = Odometry()
@@ -267,19 +267,11 @@ class LocalizationNode(Node):
         _, _, yaw_true = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.true_pose = np.array([[x_pose_true, y_pose_true, yaw_true]]).T
         # Simulate measuring landmarks
-        for lmark in self.landmarks:
-            z = z_landmark(self.true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
-            if z is not None:
-                # deleta v
-                z_hat = eval_hx(*self.ekf.mu[:,0], *lmark)  
-                self.publish_debug(z[:,0], z_hat, self.true_pose)
-                #delete^
-                self.ekf.update(z[:,0], lmark, residual=residual)
-                #self.publish_ekf_update()              
+        
 
     def odom_callback(self, msg):
-        x_pose = msg.pose.pose.position.x + initial_pose[0,0] # Adjust for offset between the odom frame and the map frame
-        y_pose = msg.pose.pose.position.y + initial_pose[1,0] #
+        x_pose = msg.pose.pose.position.x + self.initial_pose[0][0] # Adjust for offset between the odom frame and the map frame
+        y_pose = msg.pose.pose.position.y + self.initial_pose[1][0] #
         _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
         
@@ -287,8 +279,11 @@ class LocalizationNode(Node):
     def ekf_predict(self):
         u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0]) + np.array([[np.random.normal(0, self.std_rot1), np.random.normal(0, self.std_transl), np.random.normal(0, self.std_rot2)]]).T#TODO add noise here?
         self.ekf.predict(u=u)
-        self.publish_ekf_prediction(self.ekf.mu[:,0])
         self.prev_pose = self.odom_pose.copy()# Update
+        for lmark in self.landmarks:
+            z = z_landmark(self.true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
+            if z is not None:
+                self.ekf.update(z[:,0], lmark, residual=residual)
         self.publish_ekf()
 
 
