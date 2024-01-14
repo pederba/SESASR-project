@@ -76,9 +76,11 @@ def update(self, z, lmark, residual=np.subtract):
     # Evaluate the expected measurement and compute the residual, then update the state prediction
     z_hat = self.eval_hx(*self.mu[:,0], *lmark)
 
-    self.y = residual(z[:, 0], z_hat[:, 0])
-    #self.mu = self.mu + self.K @ (z - z_hat)
-    self.mu = self.mu + self.K @ (self.y)
+     # Evaluate the expected measurement and compute the residual, then update the state prediction
+    z_hat = self.eval_hx(*self.mu[:,0], *lmark)
+    self.y = np.array(residual(z[:,0], z_hat[:,0]))
+    self.y = self.y.reshape(-1, 1)
+    self.mu = self.mu + (self.K @ self.y)
 
     # P = (I-KH)P(I-KH)' + KRK' is more numerically stable and works for non-optimal K vs the equation
     # P = (I-KH)P usually seen in the literature. 
