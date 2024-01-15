@@ -27,6 +27,8 @@ initial_pose = localization_node_params['initial_pose']
 std_rot1 = localization_node_params["std_rot1"] 
 std_transl = localization_node_params["std_transl"]
 std_rot2 = localization_node_params["std_rot2"]
+std_lin_vel = localization_node_params["std_lin_vel"] 
+std_ang_vel = localization_node_params["std_ang_vel"]
 std_rng = localization_node_params["std_rng"]
 std_brg = localization_node_params["std_brg"]
 max_range = localization_node_params["max_range"]
@@ -90,7 +92,7 @@ orientation_max_abs_error = np.max(np.abs(filter[:,2] - ground_truth[:,2]))
 orientation_total_cumulative_error = np.sum(np.abs(filter[:,2] - ground_truth[:,2]))
 
 # where to put results
-subfolder = "std_rot1:" + str(std_rot1) + "  std_transl:" + str(std_transl) + "  std_rot2:" + str(std_rot2) + "  std_rng:" + str(std_rng) + "  std_brg:" + str(std_brg) + "  max_range:" + str(max_range) + "  fov_deg:" + str(fov_deg) + "/"
+subfolder = "std_lin_vel: " + str(std_lin_vel) + "  std_ang_vel:" + str(std_ang_vel) + "  std_rng:" + str(std_rng) + "  std_brg:" + str(std_brg) + "  max_range:" + str(max_range) + "  fov_deg:" + str(fov_deg) + "/"
 
 directory = "plots/" + subfolder
 if not os.path.exists(directory):
@@ -113,6 +115,8 @@ with open(filename, 'a') as f:
         "std_rot1": std_rot1, 
         "std_transl": std_transl,
         "std_rot2": std_rot2,
+        "std_lin_vel": std_lin_vel, 
+        "std_ang_vel": std_ang_vel,
         "std_rng": std_rng,
         "std_brg": std_brg,
         "max_range": max_range,

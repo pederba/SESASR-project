@@ -287,9 +287,7 @@ class LocalizationNode(Node):
         self.vel_cmd = np.array([[msg.linear.x, msg.angular.z]]).T
     
     def ekf_predict(self):
-        self.get_logger().info("u = " + str(self.vel_cmd))
         Gt, Vt, Sigma, mu = self.ekf.predict(u=self.vel_cmd, g_extra_args=(self.ekf_period_s,))
-        self.get_logger().info('From ekf: Gt:' + str(Gt) + " Vt:" + str(Vt) + " Sigma:" + str(Sigma) + " mu:" + str(mu))
         self.prev_pose = self.odom_pose.copy()# Update
         for lmark in self.landmarks:
             z = z_landmark(self.true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)
