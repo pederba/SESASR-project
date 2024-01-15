@@ -8,12 +8,12 @@ gux = Matrix([[x + v/w*sympy.sin(theta + w*dt) - v/w*sympy.sin(theta)],
               [y + v/w*sympy.cos(theta) - v/w*sympy.cos(theta + w*dt)], 
               [theta + w*dt]])
 
-eval_gux = sympy.lambdify((x, y, theta, v, w, dt), gux, 'numpy')
+eval_gux_vel = sympy.lambdify((x, y, theta, v, w, dt), gux, 'numpy')
 
 Gt = gux.jacobian(Matrix([x, y, theta]))
-eval_Gt = sympy.lambdify((x, y, theta, v, w, dt), Gt, 'numpy')
+eval_Gt_vel = sympy.lambdify((x, y, theta, v, w, dt), Gt, 'numpy')
 Vt = gux.jacobian(Matrix([v, w]))
-eval_Vt = sympy.lambdify((x, y, theta, v, w, dt), Vt, 'numpy')
+eval_Vt_vel = sympy.lambdify((x, y, theta, v, w, dt), Vt, 'numpy')
 
 # Odometry motion model
 def get_odometry_input(x, x_prev):

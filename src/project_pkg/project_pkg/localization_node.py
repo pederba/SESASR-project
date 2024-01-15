@@ -7,7 +7,7 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Quaternion
 
 from project_pkg.ekf import RobotEKF
-from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, get_odometry_input
+from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, get_odometry_input, eval_gux_vel, eval_Gt_vel, eval_Vt_vel
 from project_pkg.measurement_model import eval_Ht, eval_hx, z_landmark, residual, inverse_eval_hx
 
 from geometry_msgs.msg import TransformStamped
@@ -78,6 +78,13 @@ class LocalizationNode(Node):
             Odometry,
             '/res_debug',
             10)
+        
+        self.__vel_cmd_sub = self.create_subscription(
+            Odometry,
+            '/diff_drive_controller/cmd_vel_unstamped',
+            self.vel_command_callback,
+            10)
+        self.__vel_cmd_sub
         
         self.declare_parameter('ekf_period_s', 0.005)
         self.declare_parameter('Qt_0', 0.01)
@@ -165,13 +172,13 @@ class LocalizationNode(Node):
         # self.max_range = 8  # [m]
         # self.fov_deg =  np.deg2rad(45) # [rad]
 
-        self.ekf = RobotEKF(
+        self.ekf = RobotEKF(# TODO upate input for velocity
             dim_x=3,
             dim_z=2,
             dim_u=3,
-            eval_gux=eval_gux_odom,
-            eval_Gt=eval_Gt_odom,
-            eval_Vt=eval_Vt_odom,
+            eval_gux=eval_gux_vel,
+            eval_Gt=eval_Gt_vel,
+            eval_Vt=eval_Vt_vel,
             eval_hx=eval_hx,
             eval_Ht=eval_Ht
         )
@@ -184,6 +191,7 @@ class LocalizationNode(Node):
         self.prev_pose = self.initial_pose.copy()
         self.true_pose = self.initial_pose.copy()
         self.z = None
+        self.vel_cmd = np.array([[0,0]]).T
 
     def publish_ekf(self):
         msg = Odometry()
@@ -266,7 +274,7 @@ class LocalizationNode(Node):
         y_pose_true = msg.pose.pose.position.y
         _, _, yaw_true = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.true_pose = np.array([[x_pose_true, y_pose_true, yaw_true]]).T
-        # Simulate measuring landmarks
+        
         
 
     def odom_callback(self, msg):
@@ -275,10 +283,14 @@ class LocalizationNode(Node):
         _, _, yaw = tft.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         self.odom_pose = np.array([[x_pose, y_pose, yaw]]).T
         
+        self.vel_odom = np.array([[msg.twist.twist.linear.x, msg.twist.twist.angular.z]]).T
+
+    def vel_command_callback(self, msg):
+        self.vel_cmd = np.array([[msg.linear.x, msg.angular.z]]).T
     
     def ekf_predict(self):
-        u = get_odometry_input(self.odom_pose[:,0], self.prev_pose[:,0]) + np.array([[np.random.normal(0, self.std_rot1), np.random.normal(0, self.std_transl), np.random.normal(0, self.std_rot2)]]).T#TODO add noise here?
-        self.ekf.predict(u=u)
+        self.ekf.predict(u=self.vel_cmd, g_extra_args=(self.ekf_period_s,))
+        
         self.prev_pose = self.odom_pose.copy()# Update
         for lmark in self.landmarks:
             z = z_landmark(self.true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)

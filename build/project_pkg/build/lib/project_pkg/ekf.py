@@ -34,6 +34,7 @@ def predict(self, u, g_extra_args=()):
         self.Sigma: the covariance matrix of the state prediction
     """
     # Update the state prediction evaluating the motion model
+    print(u[:,0])
     self.mu = self.eval_gux(*self.mu[:,0], *u[:,0], *g_extra_args)
     
     # Update the covariance matrix of the state prediction, 
