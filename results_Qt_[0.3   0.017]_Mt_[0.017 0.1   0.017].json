@@ -1,0 +1,18 @@
+{
+    "Qt diagonal": [
+        0.3,
+        0.017
+    ],
+    "Mt diagonal": [
+        0.017,
+        0.1,
+        0.017
+    ],
+    "position_rmse": 0.0679672522013172,
+    "position_max_abs_error": 0.3321678438397564,
+    "position_total_cumulative_error": 111.85456597254463,
+    "position_error_percentage": 0.0004311572024172892,
+    "orientation_rmse": 2.5870743570890222,
+    "orientation_max_abs_error": 4.617608581848152,
+    "orientation_total_cumulative_error": 3563.6690131100877
+}

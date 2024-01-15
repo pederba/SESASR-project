@@ -1,9 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-import json
-
-from project_pkg.localization_node import initial_pose #, Mt, Qt, 
+import json 
 
 import yaml
 
@@ -14,6 +12,8 @@ file_path = '/workspaces/SESASR-project/src/project_pkg/config/localization_para
 with open(file_path, 'r') as file:
     data = yaml.safe_load(file)
 
+
+
 # Accessing parameters
 localization_node_params = data['localization_node']['ros__parameters']
 ekf_period_s = localization_node_params['ekf_period_s']
@@ -22,6 +22,7 @@ Qt_1 = localization_node_params['Qt_1']
 Mt_0 = localization_node_params['Mt_0']
 Mt_1 = localization_node_params['Mt_1']
 Mt_2 = localization_node_params['Mt_2']
+initial_pose = localization_node_params['initial_pose']
 
 Qt = np.diag([Qt_0, Qt_1]) # measurement noise
 Mt = np.diag([Mt_0, Mt_1, Mt_2]) # motion noise
