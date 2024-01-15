@@ -1,0 +1,25 @@
+{
+    "Qt diagonal": [
+        0.03,
+        0.0017
+    ],
+    "Mt diagonal": [
+        0.017,
+        0.1,
+        0.017
+    ],
+    "position_rmse": 0.05606854352748932,
+    "position_max_abs_error": 0.13963261463086363,
+    "position_total_cumulative_error": 61.41926692851315,
+    "position_error_percentage": 0.0001314934344493274,
+    "orientation_rmse": 2.431562155512804,
+    "orientation_max_abs_error": 4.3708478581406265,
+    "orientation_total_cumulative_error": 2070.4062969322295,
+    "std_rot1": 0.017453292519943295,
+    "std_transl": 0.1,
+    "std_rot2": 0.017453292519943295,
+    "std_rng": 0.0,
+    "std_brg": 0.0,
+    "max_range": 8.0,
+    "fov_deg": 45.0
+}

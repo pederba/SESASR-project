@@ -1,0 +1,35 @@
+{
+    "Qt diagonal": [
+        30.0,
+        1.7
+    ],
+    "Mt diagonal": [
+        0.017,
+        0.1,
+        0.017
+    ],
+    "position_rmse": 0.12648116450202265,
+    "position_max_abs_error": 0.5171880744211255,
+    "position_total_cumulative_error": 560.8542883560579,
+    "position_error_percentage": 0.00041837623666762786,
+    "orientation_rmse": 3.085204401774946,
+    "orientation_max_abs_error": 4.487014517844881,
+    "orientation_total_cumulative_error": 14219.747186308174
+}{
+    "Qt diagonal": [
+        30.0,
+        1.7
+    ],
+    "Mt diagonal": [
+        0.017,
+        0.1,
+        0.017
+    ],
+    "position_rmse": 0.12712629200232192,
+    "position_max_abs_error": 0.45870245036471824,
+    "position_total_cumulative_error": 137.81704654552703,
+    "position_error_percentage": 0.001732700878966146,
+    "orientation_rmse": 2.44163627396294,
+    "orientation_max_abs_error": 4.404730554226957,
+    "orientation_total_cumulative_error": 2123.421743477269
+}

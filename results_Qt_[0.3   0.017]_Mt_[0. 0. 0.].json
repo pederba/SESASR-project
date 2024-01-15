@@ -1,0 +1,51 @@
+{
+    "Qt diagonal": [
+        0.3,
+        0.017
+    ],
+    "Mt diagonal": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "position_rmse": 0.035127168859752866,
+    "position_max_abs_error": 0.08814936980331456,
+    "position_total_cumulative_error": 36.403429054858,
+    "position_error_percentage": 0.0002368143311925549,
+    "orientation_rmse": 2.4545781523663326,
+    "orientation_max_abs_error": 4.498688813240855,
+    "orientation_total_cumulative_error": 2190.7571848110247
+    std_rot1: 0.0 #0.017453292519943295 
+    std_transl: 0.0 #0.1
+    std_rot2: 0.0 #0.017453292519943295
+    std_lin_vel: 0.0 #0.1 Not in use
+    std_ang_vel: 0.0 #0.017453292519943295 Not in use
+    std_rng: 0.3
+    std_brg: 0.017453292519943295
+    max_range: 8.0
+    fov_deg: 45.0
+}{
+    "Qt diagonal": [
+        0.3,
+        0.017
+    ],
+    "Mt diagonal": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "position_rmse": 0.035127168859752866,
+    "position_max_abs_error": 0.08814936980331456,
+    "position_total_cumulative_error": 36.403429054858,
+    "position_error_percentage": 0.0002368143311925549,
+    "orientation_rmse": 2.4545781523663326,
+    "orientation_max_abs_error": 4.498688813240855,
+    "orientation_total_cumulative_error": 2190.7571848110247,
+    "std_rot1": 0.0,
+    "std_transl": 0.0,
+    "std_rot2": 0.0,
+    "std_rng": 0.3,
+    "std_brg": 0.017453292519943295,
+    "max_range": 8.0,
+    "fov_deg": 45.0
+}
