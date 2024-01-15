@@ -1,4 +1,4 @@
-1. with no noise
+1. with no noise OK
 2. with measurement noise only OK
-3. with odom noise only
+3. with odom noise only OK
 4. with both odom and measurment noise OK
