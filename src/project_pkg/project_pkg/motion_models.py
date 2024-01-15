@@ -15,6 +15,17 @@ eval_Gt_vel = sympy.lambdify((x, y, theta, v, w, dt), Gt, 'numpy')
 Vt = gux.jacobian(Matrix([v, w]))
 eval_Vt_vel = sympy.lambdify((x, y, theta, v, w, dt), Vt, 'numpy')
 
+# Velocity motion model for w=0
+gux_sing = Matrix([[x + v*dt*sympy.cos(theta)], 
+                   [y + v*dt*sympy.sin(theta)], 
+                   [theta]])
+eval_gux_sing = sympy.lambdify((x, y, theta, v, w, dt), gux_sing, 'numpy')
+Gt_sing = gux_sing.jacobian(Matrix([x, y, theta]))
+eval_Gt_sing = sympy.lambdify((x, y, theta, v, w, dt), Gt_sing, 'numpy')
+Vt_sing = gux_sing.jacobian(Matrix([v, w]))
+eval_Vt_sing = sympy.lambdify((x, y, theta, v, w, dt), Vt_sing, 'numpy')
+
+
 # Odometry motion model
 def get_odometry_input(x, x_prev):
     rot1 = np.arctan2(x[1] - x_prev[1], x[0] - x_prev[0]) - x_prev[2]

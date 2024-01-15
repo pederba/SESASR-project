@@ -4,7 +4,7 @@ import tf_transformations as tft
 
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Quaternion
+from geometry_msgs.msg import Quaternion, Twist
 
 from project_pkg.ekf import RobotEKF
 from project_pkg.motion_models import eval_gux_odom, eval_Gt_odom, eval_Vt_odom, get_odometry_input, eval_gux_vel, eval_Gt_vel, eval_Vt_vel
@@ -80,7 +80,7 @@ class LocalizationNode(Node):
             10)
         
         self.__vel_cmd_sub = self.create_subscription(
-            Odometry,
+            Twist,
             '/diff_drive_controller/cmd_vel_unstamped',
             self.vel_command_callback,
             10)
@@ -91,7 +91,6 @@ class LocalizationNode(Node):
         self.declare_parameter('Qt_1', 0.01)
         self.declare_parameter('Mt_0', 0.01)
         self.declare_parameter('Mt_1', 0.01)
-        self.declare_parameter('Mt_2', 0.01)
         self.declare_parameter('initial_pose', [-2.0, -0.5, 0.0])
         self.declare_parameter('initial_covariance', [0.1, 0.1, 0.1])
         self.declare_parameter('landmark1', [0,0])
@@ -119,7 +118,6 @@ class LocalizationNode(Node):
         Qt_1 = self.get_parameter('Qt_1').value
         Mt_0 = self.get_parameter('Mt_0').value
         Mt_1 = self.get_parameter('Mt_1').value
-        Mt_2 = self.get_parameter('Mt_2').value
         self.initial_pose = np.array([self.get_parameter('initial_pose').value]).T
         self.initial_covariance = self.get_parameter('initial_covariance').value
         # Get landmarks
@@ -153,7 +151,7 @@ class LocalizationNode(Node):
             self.ekf_predict
         )
         Qt = np.diag([Qt_0, Qt_1]) # measurement noise
-        Mt = np.diag([Mt_0, Mt_1, Mt_2]) # motion noise
+        Mt = np.diag([Mt_0, Mt_1]) # motion noise
 
         # self.initial_covariance = np.diag([0.1, 0.1, 0.1])
         # self.landmarks = np.array([[0,0], [1,0], [1,1], [0,1], [-1,1], [-1,0], [-1,-1], [0,-1], [1,-1]])
@@ -289,8 +287,7 @@ class LocalizationNode(Node):
         self.vel_cmd = np.array([[msg.linear.x, msg.angular.z]]).T
     
     def ekf_predict(self):
-        self.ekf.predict(u=self.vel_cmd, g_extra_args=(self.ekf_period_s,))
-        
+        Gt, Vt, Sigma, mu = self.ekf.predict(u=self.vel_cmd, g_extra_args=(self.ekf_period_s,))
         self.prev_pose = self.odom_pose.copy()# Update
         for lmark in self.landmarks:
             z = z_landmark(self.true_pose, lmark, self.std_rng, self.std_brg, self.max_range, self.fov_deg)

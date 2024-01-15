@@ -1,5 +1,6 @@
 import numpy as np
 from numpy.linalg import inv
+from project_pkg.motion_models  import eval_gux_sing, eval_Gt_sing, eval_Vt_sing
 
 class RobotEKF:
     def __init__(
@@ -34,14 +35,17 @@ def predict(self, u, g_extra_args=()):
         self.Sigma: the covariance matrix of the state prediction
     """
     # Update the state prediction evaluating the motion model
-    print(u[:,0])
-    self.mu = self.eval_gux(*self.mu[:,0], *u[:,0], *g_extra_args)
-    
-    # Update the covariance matrix of the state prediction, 
-    # you need to evaluate the Jacobians Gt and Vt
-    Gt = self.eval_Gt(*self.mu[:,0], *u[:,0], *g_extra_args)
-    Vt = self.eval_Vt(*self.mu[:,0], *u[:,0], *g_extra_args)
-    self.Sigma = Gt @ self.Sigma @ Gt.T + Vt @ self.Mt @ Vt.T
+    if abs(u[1,0]) < 1e-3:
+        self.mu = eval_gux_sing(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Gt = eval_Gt_sing(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Vt = eval_Vt_sing(*self.mu[:,0], *u[:,0], *g_extra_args)
+        self.Sigma = Gt @ self.Sigma @ Gt.T + Vt @ self.Mt @ Vt.T
+    else:
+        self.mu = self.eval_gux(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Gt = self.eval_Gt(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Vt = self.eval_Vt(*self.mu[:,0], *u[:,0], *g_extra_args)
+        self.Sigma = Gt @ self.Sigma @ Gt.T + Vt @ self.Mt @ Vt.T
+    return Gt, Vt, self.Sigma, self.mu
 
 RobotEKF.predict = predict
 
