@@ -51,9 +51,9 @@ class RecorderNode(Node):
       self.ground_truth.append([ground_truth.pose.pose.position.x, ground_truth.pose.pose.position.y, yaw])
 
    def save_data(self):
-      np.save("odom.npy", np.array(self.odom))
-      np.save("filter.npy", np.array(self.filter))
-      np.save("ground_truth.npy", np.array(self.ground_truth))
+      np.savetxt("odom.csv", np.array(self.odom))
+      np.savetxt("filter.csv", np.array(self.filter))
+      np.savetxt("ground_truth.csv", np.array(self.ground_truth))
     
 
 def main(args=None):

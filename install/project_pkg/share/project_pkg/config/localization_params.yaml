@@ -1,11 +1,11 @@
 localization_node:
   ros__parameters:
     ekf_period_s: 0.01
-    Qt_0: 1.0 #Measurement noise #0.3
-    Qt_1: 1.0 #0.017
-    Mt_0: 0.1 #Process noise #0.017
-    Mt_1: 0.017453292519943295 #0.1
-    Mt_2: 0.1 #0.017 # Not used
+    Qt_0: 0.3 #Measurement noise #0.3
+    Qt_1: 0.017 #0.017
+    Mt_0: 10.0 #Process noise #0.017
+    Mt_1: 10.0 #0.1
+    Mt_2: 10.0 #0.017 # Not used
     initial_pose: [-2.0, -0.5, 0.0]
     initial_covariance: [0.1, 0.1, 0.1]
     landmark1: [0,0]
@@ -20,10 +20,10 @@ localization_node:
     std_rot1: 0.0 #0.017453292519943295 
     std_transl: 0.0 #0.1
     std_rot2: 0.0 #0.017453292519943295
-    std_lin_vel: 0.1 #0.1
-    std_ang_vel: 0.017453292519943295 #0.017453292519943295
-    std_rng: 0.0 #0.3
-    std_brg: 0.0 # 0.017453292519943295
+    std_lin_vel: 0.0 #0.1
+    std_ang_vel: 0.0 #0.017453292519943295
+    std_rng: 0.3 #0.3
+    std_brg: 0.017453292519943295 # 0.017453292519943295
     max_range: 8.0
     fov_deg: 45.0
 

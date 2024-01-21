@@ -40,9 +40,9 @@ Qt = np.diag([Qt_0, Qt_1]) # measurement noise
 Mt = np.diag([Mt_0, Mt_1, Mt_2]) # motion noise
 
 
-filter = np.load("filter.npy")
-odom = np.load("odom.npy")
-ground_truth = np.load("ground_truth.npy")
+filter = np.loadtxt("filter.csv")
+odom = np.loadtxt("odom.csv")
+ground_truth = np.loadtxt("ground_truth.csv")
 
 # # Plot odom data
 # plt.scatter(odom[:, 0], odom[:, 1], label="odom")
@@ -138,9 +138,9 @@ odom_offset[:, 1] -= 0.5
 
 
 # plot 
-plt.scatter(filter[:,0], filter[:,1], label="filter")
-plt.plot(odom_offset[:,0], odom_offset[:,1], label="odom")
-plt.plot(ground_truth[:,0], ground_truth[:,1], label="ground truth")
+plt.scatter(filter[:,0], filter[:,1], label="filter", color="blue")
+plt.plot(odom_offset[:,0], odom_offset[:,1], label="odom", color="orange")
+plt.plot(ground_truth[:,0], ground_truth[:,1], label="ground truth", color="green")
 plt.scatter(landmarks[:,0], landmarks[:,1], color='red', label="landmarks")  # Add this line to plot the landmarks
 plt.legend()
 plt.xlabel("x")
