@@ -49,7 +49,7 @@ def generate_launch_description():
         ),
 
         ExecuteProcess(
-            cmd=['ros2', 'bag', 'play', '/workspaces/SESASR-project/bag_with_commands_turning'],
+            cmd=['ros2', 'bag', 'play', '/workspaces/SESASR-project/bag_with_commands_turning3'],
             output='screen'
         ),
     ])
