@@ -1,0 +1,79 @@
+{
+    "Qt diagonal": [
+        0.3,
+        0.017
+    ],
+    "Mt diagonal": [
+        10.0,
+        10.0,
+        10.0
+    ],
+    "position_rmse": 0.5984960160231697,
+    "position_max_abs_error": 2.687910481514493,
+    "position_total_cumulative_error": 513.2488164699004,
+    "position_error_percentage": 0.00010483420141409217,
+    "orientation_rmse": 1.9566917566897304,
+    "orientation_max_abs_error": 6.199982207906668,
+    "orientation_total_cumulative_error": 1789.8590097582342,
+    "std_rot1": 0.0,
+    "std_transl": 0.0,
+    "std_rot2": 0.0,
+    "std_lin_vel": 0.0,
+    "std_ang_vel": 0.0,
+    "std_rng": 0.3,
+    "std_brg": 0.017453292519943295,
+    "max_range": 8.0,
+    "fov_deg": 45.0
+}{
+    "Qt diagonal": [
+        0.3,
+        0.017
+    ],
+    "Mt diagonal": [
+        10.0,
+        10.0,
+        10.0
+    ],
+    "position_rmse": 0.07078683935205528,
+    "position_max_abs_error": 0.19266145519439398,
+    "position_total_cumulative_error": 75.03974206143425,
+    "position_error_percentage": 0.000315639849183326,
+    "orientation_rmse": 1.4812831843193321,
+    "orientation_max_abs_error": 5.888640613613049,
+    "orientation_total_cumulative_error": 1257.3523409115764,
+    "std_rot1": 0.0,
+    "std_transl": 0.0,
+    "std_rot2": 0.0,
+    "std_lin_vel": 0.0,
+    "std_ang_vel": 0.0,
+    "std_rng": 0.3,
+    "std_brg": 0.017453292519943295,
+    "max_range": 8.0,
+    "fov_deg": 45.0
+}{
+    "Qt diagonal": [
+        0.3,
+        0.017
+    ],
+    "Mt diagonal": [
+        10.0,
+        10.0,
+        10.0
+    ],
+    "position_rmse": 0.04797674829035978,
+    "position_max_abs_error": 0.13595554946514593,
+    "position_total_cumulative_error": 56.924938722369475,
+    "position_error_percentage": 0.0003544185926808059,
+    "orientation_rmse": 1.8508795643940323,
+    "orientation_max_abs_error": 6.162629553112856,
+    "orientation_total_cumulative_error": 1499.1429322647982,
+    "std_rot1": 0.0,
+    "std_transl": 0.0,
+    "std_rot2": 0.0,
+    "std_lin_vel": 0.0,
+    "std_ang_vel": 0.0,
+    "std_rng": 0.3,
+    "std_brg": 0.017453292519943295,
+    "max_range": 8.0,
+    "fov_deg": 45.0
+}
