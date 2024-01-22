@@ -22,4 +22,28 @@
     "std_brg": 0.0,
     "max_range": 8.0,
     "fov_deg": 45.0
+}{
+    "Qt diagonal": [
+        0.1,
+        0.1
+    ],
+    "Mt diagonal": [
+        0.1,
+        0.1,
+        0.1
+    ],
+    "position_rmse": 0.581440727237409,
+    "position_max_abs_error": 1.3966449998265178,
+    "position_total_cumulative_error": 775.8829914523985,
+    "position_error_percentage": 2.5775942128560088e-11,
+    "orientation_rmse": 1.1500032967709586,
+    "orientation_max_abs_error": 6.209438952029318,
+    "orientation_total_cumulative_error": 1326.1292355627281,
+    "std_rot1": 0.0,
+    "std_transl": 0.0,
+    "std_rot2": 0.0,
+    "std_rng": 0.0,
+    "std_brg": 0.0,
+    "max_range": 8.0,
+    "fov_deg": 45.0
 }

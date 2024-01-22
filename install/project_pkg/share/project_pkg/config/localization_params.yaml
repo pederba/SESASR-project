@@ -1,6 +1,6 @@
 localization_node:
   ros__parameters:
-    ekf_period_s: 0.01
+    ekf_period_s: 0.001
     Qt_0: 0.1 #Measurement noise #0.3
     Qt_1: 0.1 #0.017
     Mt_0: 0.1 #Process noise #0.017
