@@ -1,0 +1,28 @@
+04.01.2024
+Har sett på ekf i dag det ser ut til at det er en form for gimbal lock 
+når man går fra å ikke kunne se noen landmark til at man ser landmarks.
+Det kan være interessant å se på hvordan yaw, z og z_hat variablene endrer seg 
+
+08.01.2024
+Tror det er feil i predict stepet. Vi gir inputen som odom sin posisjon, men det skal egnt være odom sin input. Altså pådraget til modellen.
+
+Feilen er at det ikke er lagt in støy i målingene på odometri!!!!
+
+09.01.2024
+Må dra på lab for å finne ut hvor det gir mening å legge inn støyen 
+- std_rot1, std_transl, std_rot2: noise parameters for Odometry m.m.
+- std_lin_vel, std_ang_vel: noise parameters for Velocity m.m.
+
+21.01.2024
+Plots for velocity modellen
+- En test med null noise på measurement std_rng: 0.0, std_brg: 0.0, Kjør med 0.1 i både Q og M
+- En med noise på measurement std_rng: 0.3, std_brg: 0.017453292519943295, Beste jeg finner med verdier over og under.
+- Ingen noise på vel commands
+- SNURRING PÅ ALLE!!!
+
+Plots for Odometry
+- Ingen noise på odom std_rot1: 0.0, std_transl: 0.0, std_rot2: 0.0 
+- En med noise på measurement
+- Og en uten noise
+- SNURRING PÅ ALLE!!!
+

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_msgs
+CMAKE_SOURCE_DIR = /workspaces/SESASR-project/src/turtlebot3/turtlebot3_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pederba/sesasr_project_ws/build/turtlebot3_msgs
+CMAKE_BINARY_DIR = /workspaces/SESASR-project/build/turtlebot3_msgs
 
 # Utility rule file for ament_cmake_python_build_turtlebot3_msgs_egg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/compiler_dep
 include CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg:
-	cd /home/pederba/sesasr_project_ws/build/turtlebot3_msgs/ament_cmake_python/turtlebot3_msgs && /usr/bin/python3.10 setup.py egg_info
+	cd /workspaces/SESASR-project/build/turtlebot3_msgs/ament_cmake_python/turtlebot3_msgs && /usr/bin/python3.10 setup.py egg_info
 
 ament_cmake_python_build_turtlebot3_msgs_egg: CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg
 ament_cmake_python_build_turtlebot3_msgs_egg: CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/clean
 
 CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/depend:
-	cd /home/pederba/sesasr_project_ws/build/turtlebot3_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_msgs /home/pederba/sesasr_project_ws/src/turtlebot3/turtlebot3_msgs /home/pederba/sesasr_project_ws/build/turtlebot3_msgs /home/pederba/sesasr_project_ws/build/turtlebot3_msgs /home/pederba/sesasr_project_ws/build/turtlebot3_msgs/CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/SESASR-project/build/turtlebot3_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/SESASR-project/src/turtlebot3/turtlebot3_msgs /workspaces/SESASR-project/src/turtlebot3/turtlebot3_msgs /workspaces/SESASR-project/build/turtlebot3_msgs /workspaces/SESASR-project/build/turtlebot3_msgs /workspaces/SESASR-project/build/turtlebot3_msgs/CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_build_turtlebot3_msgs_egg.dir/depend
 

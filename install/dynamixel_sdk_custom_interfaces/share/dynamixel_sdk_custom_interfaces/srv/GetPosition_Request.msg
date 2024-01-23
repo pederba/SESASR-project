@@ -1,1 +1,3 @@
-/home/pederba/sesasr_project_ws/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Request.msg
+# Constants
+# Request
+uint8 id
