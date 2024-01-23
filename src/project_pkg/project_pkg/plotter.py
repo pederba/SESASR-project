@@ -38,9 +38,10 @@ Qt = np.diag([Qt_0, Qt_1]) # measurement noise
 Mt = np.diag([Mt_0, Mt_1, Mt_2]) # motion noise
 
 
-filter = np.load("filter.npy")
-odom = np.load("odom.npy")
-ground_truth = np.load("ground_truth.npy")
+
+filter = np.loadtxt("filter.csv")
+odom = np.loadtxt("odom.csv")
+ground_truth = np.loadtxt("ground_truth.csv")
 
 # # Plot odom data
 # plt.scatter(odom[:, 0], odom[:, 1], label="odom")

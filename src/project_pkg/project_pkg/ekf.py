@@ -1,5 +1,7 @@
 import numpy as np
 from numpy.linalg import inv
+from project_pkg.motion_models  import eval_gux_sing, eval_Gt_sing, eval_Vt_sing
+
 
 class RobotEKF:
     def __init__(
@@ -25,7 +27,7 @@ class RobotEKF:
 
         self._I = np.eye(dim_x)  # identity matrix used for computations
 
-def predict(self, u, g_extra_args=()):
+def predict_odom(self, u, g_extra_args=()):
     """
     Update the state prediction using the control input u and compute the relative uncertainty ellipse
 
@@ -42,7 +44,30 @@ def predict(self, u, g_extra_args=()):
     Vt = self.eval_Vt(*self.mu[:,0], *u[:,0], *g_extra_args)
     self.Sigma = Gt @ self.Sigma @ Gt.T + Vt @ self.Mt @ Vt.T
 
-RobotEKF.predict = predict
+RobotEKF.predict_odom = predict_odom
+
+def predict_vel(self, u, g_extra_args=()):
+    """
+    Update the state prediction using the control input u and compute the relative uncertainty ellipse
+
+    Modified variables:
+        self.mu: the state prediction
+        self.Sigma: the covariance matrix of the state prediction
+    """
+    # Update the state prediction evaluating the motion model
+    if abs(u[1,0]) < 1e-3:
+        self.mu = eval_gux_sing(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Gt = eval_Gt_sing(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Vt = eval_Vt_sing(*self.mu[:,0], *u[:,0], *g_extra_args)
+        self.Sigma = Gt @ self.Sigma @ Gt.T + Vt @ self.Mt @ Vt.T
+    else:
+        self.mu = self.eval_gux(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Gt = self.eval_Gt(*self.mu[:,0], *u[:,0], *g_extra_args)
+        Vt = self.eval_Vt(*self.mu[:,0], *u[:,0], *g_extra_args)
+        self.Sigma = Gt @ self.Sigma @ Gt.T + Vt @ self.Mt @ Vt.T
+    return Gt, Vt, self.Sigma, self.mu
+
+RobotEKF.predict_vel = predict_vel
 
 def update(self, z, lmark, residual=np.subtract):
     """Performs the update innovation of the extended Kalman filter.
